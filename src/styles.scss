@@ -134,6 +134,10 @@ p {
   padding: 20px;
 }
 
+.p-30 {
+  padding: 30px;
+}
+
 .pr-10 {
   padding-right: 10px;
 }
@@ -156,4 +160,8 @@ p {
 
 .mt-50 {
   margin-top: 50px;
+}
+
+.pt-nav {
+  padding-top: $navbar-height;
 }
