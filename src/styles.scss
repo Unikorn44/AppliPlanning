@@ -1,0 +1,171 @@
+@import "./assets/stylesheet/variables";
+@import "./assets/stylesheet/button";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 h2 h3 h4 h5 h6 p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: $headers-font;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-blue;
+}
+
+h2 {
+  font-family: $headers-font;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-black;
+}
+
+h3 {
+  font-family: $headers-font;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-yellow;
+}
+
+h4 {
+  font-family: $headers-font;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-blue;
+}
+
+h5 {
+  font-family: $headers-font;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-black;
+}
+
+h6 {
+  font-family: $headers-font;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-yellow;
+}
+
+p {
+  font-family: $body-font;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-black;
+}
+
+// Layout
+.container {
+  max-width: 100vw;
+  display: block;
+  margin: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-justify-content-center {
+  justify-content: center;
+}
+
+.flex-justify-content-between {
+  justify-content: space-between;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-align-items-between {
+  align-items: space-between;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+.flex-50 {
+  flex: 1 1 50%;
+}
+
+// utils
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.pt-nav {
+  padding-top: $navbar-height;
+}

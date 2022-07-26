@@ -1,0 +1,21 @@
+.btn-primary {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0rem 35rem;
+  background-color: $color-blue;
+  text-align: center;
+  transition: 0.5s;
+  h3 {
+    color: $color-yellow;
+  }
+  &:hover {
+    background-color: $color-yellow;
+    transition: 0.5s;
+    h3 {
+      color: $color-blue;
+    }
+  }
+}
