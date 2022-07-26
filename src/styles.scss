@@ -89,7 +89,12 @@ p {
 .container {
   max-width: 100vw;
   display: block;
-  margin: auto;
+  padding-top: $navbar-height;
+}
+
+.container-home {
+  max-width: 100vw;
+  display: block;
 }
 
 .d-flex {
