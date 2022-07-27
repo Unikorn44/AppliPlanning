@@ -1,0 +1,12 @@
+.page {
+    background-image:linear-gradient(rgba(255, 240, 220, 0.7), rgba(255, 240, 220, 0.6)), url('../assets/images/image_home.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .page-content {
+        .content {
+            margin: 0 5rem;
+        }
+    }
+}

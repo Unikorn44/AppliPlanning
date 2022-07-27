@@ -1,0 +1,14 @@
+@import "../../assets/stylesheet/variables";
+
+.sidebar {
+    background-color: $color-black;
+    height: (100vh - $navbar-height);
+    width: $sidebar-width-close;
+    top: $navbar-height;
+    position: absolute;
+    transition: width 0.5s;
+
+    &:hover {
+        width: $sidebar-width-open;
+    }
+}

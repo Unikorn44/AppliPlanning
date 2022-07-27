@@ -1,7 +1,7 @@
 @import "../../assets/stylesheet/variables";
 
 nav {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   height: $navbar-height;
   background-color: $color-yellow-light-opacity;
