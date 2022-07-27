@@ -10,6 +10,7 @@ import { EventcardComponent } from './molecules/eventcard/eventcard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './molecules/navbar/navbar.component';
 import { SidebarComponent } from './molecules/sidebar/sidebar.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SidebarComponent } from './molecules/sidebar/sidebar.component';
     NavbarComponent,
     SidebarComponent,
     ButtonComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
