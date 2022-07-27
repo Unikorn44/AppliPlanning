@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
-import { AcceuilComponent } from './acceuil/acceuil.component';
-import { HomeComponent } from './home/home.component';
+import { AccueilComponent } from './pages/accueil/accueil.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent},
-  { path: 'acceuil', component: AcceuilComponent}
+  { path: 'accueil', component: AccueilComponent}
 ];
 
 
