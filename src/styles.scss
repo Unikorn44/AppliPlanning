@@ -104,6 +104,24 @@ p {
   max-width: 100vw;
 }
 
+.image-home {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  height: (100vh - $navbar-height);
+  text-align: center;
+
+  .cadreh1 {
+    padding: 0rem $navbar-height;
+    span {
+      color: $color-yellow;
+      font-weight: bold;
+      font-size: 5rem;
+    }
+  }
+}
+
 .d-flex {
   display: flex;
 }
