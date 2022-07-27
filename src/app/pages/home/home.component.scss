@@ -1,11 +1,15 @@
-@import "../../assets/stylesheet/variables";
+@import "../../../assets/stylesheet/variables";
 
 .image-home {
-  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  height: (100vh - $navbar-height);
   text-align: center;
-  padding-top: 30vh;
+  
   .cadreh1 {
-    padding: 0rem 12rem;
+    padding: 0rem $navbar-height;
     span {
       color: $color-yellow;
       font-weight: bold;
