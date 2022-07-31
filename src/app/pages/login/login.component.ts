@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   public identifiant!: String;
+  public password!: String;
 
   constructor() { }
 
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
 
   public onSubmitForm(): void {
     console.log(this.identifiant);
+    console.log(this.password);
   }
 
 }
