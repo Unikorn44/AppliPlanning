@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
+  public buttonText = '';
 
-  constructor() { }
+  @Input()
+	set text(name: string) {
+		this.buttonText = name.toUpperCase();
+	}
+
+	constructor() {}
 
   ngOnInit(): void {
   }
