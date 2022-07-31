@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  identifiant!: String;
+  public identifiant!: String;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmitForm(): void {
+  public onSubmitForm(): void {
     console.log(this.identifiant);
   }
 
