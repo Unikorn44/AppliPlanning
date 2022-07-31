@@ -2,13 +2,46 @@
 
 .sidebar {
     background-color: $color-black;
+    display: flex;
+    flex-direction: column  ;
     height: (100vh - $navbar-height);
-    width: $sidebar-width-close;
     top: $navbar-height;
     position: absolute;
-    transition: width 0.5s;
 
+    .sidebar-option {
+        align-items: center;
+        background-color: rgba(255, 229, 180, 0);
+        color: $color-white;
+        display: flex;
+        padding: 1vh;
+        transition: background-color 0.1s;
+
+        &:hover {
+            background-color: rgba(255, 229, 180, 0.2);
+        }
+
+        span {
+            font-weight: 500;
+            width: 0;
+            overflow: hidden;
+            transition: width 0.5s, margin 0.5s;
+            margin: 0;
+        }
+        
+        mat-icon {
+            height: $sidebar-icon-size;
+            font-size: $sidebar-icon-size;
+            width: $sidebar-icon-size;
+        }
+    }
+    
     &:hover {
-        width: $sidebar-width-open;
+        .sidebar-option {
+            span {
+                width: $sidebar-width-open;
+                display: block;
+                margin: 0 1vh 0 1.5vh;
+            }
+        }
     }
 }
