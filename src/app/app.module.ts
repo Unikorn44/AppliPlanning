@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ButtonComponent } from './molecules/atomes/button/button.component';
+import { ButtonComponent } from './button/button.component';
 import { DailyWeatherComponent } from './molecules/daily-weather/daily-weather.component';
 import { EventcardComponent } from './molecules/eventcard/eventcard.component';
 import { HomeComponent } from './pages/home/home.component';

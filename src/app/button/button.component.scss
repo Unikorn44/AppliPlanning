@@ -1,0 +1,26 @@
+@import "../../assets/stylesheet/variables";
+
+app-button {
+  margin-bottom: 3rem;
+  .btn-primary {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 50px;
+    display: block;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 3rem 5rem;
+    background-color: $color-blue;
+    transition: 0.5s;
+    h3 {
+      color: $color-yellow;
+    }
+    &:hover {
+      background-color: $color-yellow;
+      transition: 0.5s;
+      h3 {
+        color: $color-blue;
+      }
+    }
+  }
+}
