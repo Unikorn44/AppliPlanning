@@ -1,0 +1,26 @@
+.zone-center {
+  overflow: hidden;
+  .first-zone {
+    width: 60%;
+    float: right;
+    margin-bottom: -1000px; // astuce pour garder la même longueur de zone
+    padding-bottom: 1000px;
+    margin-left: 1rem;
+    text-align: center;
+    min-height: 100vh;
+  }
+  .secondary-zone {
+    width: 40%;
+    float: left;
+    margin-bottom: -1000px;
+    padding-bottom: 1000px;
+    text-align: center;
+    margin-right: 1rem;
+    min-height: 100vh;
+    img {
+      width: 10rem;
+      margin: 2rem;
+      border-radius: 50%;
+    }
+  }
+}
