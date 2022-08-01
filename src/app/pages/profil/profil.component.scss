@@ -1,3 +1,5 @@
+@import "../../../assets/stylesheet/variables";
+
 .zone-center {
   overflow: hidden;
   .first-zone {
@@ -8,6 +10,7 @@
     margin-left: 1rem;
     text-align: center;
     min-height: 100vh;
+    background-color: $color-white;
   }
   .secondary-zone {
     width: 40%;
@@ -17,10 +20,12 @@
     text-align: center;
     margin-right: 1rem;
     min-height: 100vh;
+    background-color: $color-white;
     img {
       width: 10rem;
       margin: 2rem;
       border-radius: 50%;
+      border: 3px solid $color-blue;
     }
   }
 }
