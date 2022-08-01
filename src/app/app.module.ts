@@ -14,6 +14,7 @@ import { SidebarComponent } from './molecules/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     ButtonComponent,
     LoginComponent,
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,
