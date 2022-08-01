@@ -14,10 +14,11 @@
         color: $color-white;
         display: flex;
         padding: 1vh;
-        transition: background-color 0.1s;
+        transition: background-color 0.1s, color 0.1s;
 
-        &:hover {
+        &:hover, &:active{
             background-color: rgba(255, 229, 180, 0.2);
+            color: $color-yellow-light;
         }
 
         span {
