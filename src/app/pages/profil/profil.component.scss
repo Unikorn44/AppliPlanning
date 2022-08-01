@@ -27,5 +27,13 @@
       border-radius: 50%;
       border: 3px solid $color-blue;
     }
+    .admin {
+      background-color: $color-yellow-light;
+      padding: 0.2rem;
+      height: 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.7rem;
+      border-radius: 8px;
+    }
   }
 }
