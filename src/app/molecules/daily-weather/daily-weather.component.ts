@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { pairs } from 'rxjs';
 
 @Component({
   selector: 'app-daily-weather',
@@ -7,6 +8,8 @@ import * as $ from 'jquery';
   styleUrls: ['./daily-weather.component.scss']
 })
 export class DailyWeatherComponent implements OnInit {
+
+  //private ville = "paris";
 
   constructor() { }
 
@@ -19,7 +22,7 @@ export class DailyWeatherComponent implements OnInit {
     let dataJSON = $.getJSON('https://www.prevision-meteo.ch/services/json/paris', function(data){
       let today = data.fcst_day_0;
       console.log(today);
-      //console.log(ville);
+      console.log("paris");
       console.log(today.date);
       console.log('Entre : ' + today.tmin + '°' + ' et ' + today.tmax + '°');
       console.log(today.condition);
