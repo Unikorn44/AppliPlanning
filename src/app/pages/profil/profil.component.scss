@@ -4,6 +4,7 @@
   overflow: hidden;
   min-height: (100vh - $navbar-height - 2vh);
   .first-zone {
+    border-radius: $border-radius-8;
     width: 60%;
     float: right;
     margin-bottom: -1000px; // astuce pour garder la même longueur de zone
@@ -12,7 +13,7 @@
     text-align: center;
     min-height: 100vh;
     background-color: $color-white;
-    opacity: 0.94;
+    opacity: 0.92;
     box-shadow: 1px 1px 2px $color-yellow-light;
     h4 {
       text-align: left;
@@ -35,6 +36,7 @@
     }
   }
   .secondary-zone {
+    border-radius: $border-radius-8;
     width: 40%;
     float: left;
     margin-bottom: -1000px;
@@ -43,7 +45,7 @@
     margin-right: 1rem;
     min-height: 100vh;
     background-color: $color-white;
-    opacity: 0.94;
+    opacity: 0.92;
     box-shadow: 1px 1px 2px $color-yellow-light;
     .user-information {
       text-align: left;
