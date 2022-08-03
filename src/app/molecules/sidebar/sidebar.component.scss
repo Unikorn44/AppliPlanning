@@ -5,8 +5,9 @@
     display: flex;
     flex-direction: column  ;
     height: (100vh - $navbar-height);
-    top: $navbar-height;
+    left: 0;
     position: absolute;
+    top: $navbar-height;
 
     .sidebar-option {
         align-items: center;
@@ -21,12 +22,17 @@
             color: $color-yellow-light;
         }
 
+        &:first-child {
+            margin-top: 2vh;
+        }
+
         span {
+            color: $color-white;
             font-weight: 500;
-            width: 0;
+            margin: 0;
             overflow: hidden;
             transition: width 0.5s, margin 0.5s;
-            margin: 0;
+            width: 0;
         }
         
         mat-icon {
