@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { pairs } from 'rxjs';
+
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-daily-weather',
@@ -9,17 +11,19 @@ import { pairs } from 'rxjs';
 })
 export class DailyWeatherComponent implements OnInit {
 
-  //private ville = "paris";
+  public meteoData: any;
 
-  constructor() { }
 
   ngOnInit(): void {
+    console.log("I haz test");
+    this.meteoWidget();
   }
+
 
   public meteoWidget(){
     console.log("it's a trap !");
 
-    let dataJSON = $.getJSON('https://www.prevision-meteo.ch/services/json/paris', function(data){
+    let dataJSON = $.getJSON('https://www.prevision-meteo.ch/services/json/paris', (data) =>{
       let today = data.fcst_day_0;
       console.log(today);
       console.log("paris");
@@ -27,12 +31,14 @@ export class DailyWeatherComponent implements OnInit {
       console.log('Entre : ' + today.tmin + '°' + ' et ' + today.tmax + '°');
       console.log(today.condition);
       console.log(today.icon);
+      this.meteoData = today;
+      console.log("I haz 1! " + this.meteoData);
     });
 
-    console.log(dataJSON);
-    
-
-
-
+    console.log("I haz 2 ! " + this.meteoData);
   }
+
+
+
+
 }
