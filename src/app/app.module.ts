@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NavbarComponent } from './molecules/navbar/navbar.component';
 import { ProfilComponent } from './pages/profil/profil.component';
+import { PlanningComponent } from './pages/planning/planning.component';
 import { SidebarComponent } from './molecules/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     ButtonComponent,
     LoginComponent,
     ProfilComponent,
+    PlanningComponent,
   ],
   imports: [
     BrowserModule,
