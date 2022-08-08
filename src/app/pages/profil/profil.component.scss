@@ -47,6 +47,9 @@
     background-color: $color-white;
     opacity: 0.92;
     box-shadow: 1px 1px 2px $color-yellow-light;
+    .hidden {
+      display: none;
+    }
     .card-input {
       input {
         width: auto;
@@ -66,6 +69,9 @@
     .user-information {
       text-align: left;
       padding-left: 2rem;
+      input {
+        width: 50%;
+      }
     }
     span {
       margin-left: 1rem;

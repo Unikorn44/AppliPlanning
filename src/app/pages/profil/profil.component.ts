@@ -16,4 +16,8 @@ export class ProfilComponent implements OnInit {
     console.log("hello");
   }
 
+  onSubmitForm() {
+    console.log("hello2");
+
+  }
 }
