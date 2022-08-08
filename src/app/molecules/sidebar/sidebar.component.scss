@@ -2,12 +2,10 @@
 
 .sidebar {
     background-color: $color-black;
-    display: flex;
-    flex-direction: column  ;
-    height: (100vh - $navbar-height);
-    left: 0;
-    position: absolute;
-    top: $navbar-height;
+    display: inline-flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
 
     .sidebar-option {
         align-items: center;
