@@ -12,4 +12,8 @@ export class ProfilComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  displayForm() {
+    console.log("hello");
+  }
+
 }
