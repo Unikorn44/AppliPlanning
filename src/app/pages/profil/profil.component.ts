@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-profil',
@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profil.component.scss']
 })
 export class ProfilComponent implements OnInit {
+  display: Boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  displayForm() {
+    this.display = true;
+  }
+
+  onSubmitForm() {
+    console.log("hello2");
+  }
 }
