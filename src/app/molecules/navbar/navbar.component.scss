@@ -1,7 +1,7 @@
 @import "../../../assets/stylesheet/variables";
 
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1000;
   height: $navbar-height;
