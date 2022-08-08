@@ -1,0 +1,5 @@
+@import "../assets/stylesheet/variables";
+
+.page-content {
+    min-height: (100vh - $navbar-height);
+}
