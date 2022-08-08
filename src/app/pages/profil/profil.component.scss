@@ -1,0 +1,72 @@
+@import "../../../assets/stylesheet/variables";
+
+.zone-center {
+  overflow: hidden;
+  min-height: (100vh - $navbar-height - 2vh);
+  .first-zone {
+    border-radius: $border-radius-8;
+    width: 60%;
+    float: right;
+    margin-bottom: -1000px; // astuce pour garder la même longueur de zone
+    padding-bottom: 1000px;
+    margin-left: 1rem;
+    text-align: center;
+    min-height: 100vh;
+    background-color: $color-white;
+    opacity: 0.92;
+    box-shadow: 1px 1px 2px $color-yellow-light;
+    h4 {
+      text-align: left;
+      margin-left: 2rem;
+      margin-top: 1rem;
+      border-bottom: 1px solid $color-blue;
+      width : inherit;
+    }
+    .first-zone-card {
+      text-align: left;
+      margin-left: 4rem;
+    }
+    .card-contact {
+      margin-top: 1rem;
+      text-align: left;
+      margin-left: 4rem;
+      border: 1px solid $color-yellow-light;
+      box-shadow: 0px 0px 2px $color-yellow-light;
+      width: 75%;
+    }
+  }
+  .secondary-zone {
+    border-radius: $border-radius-8;
+    width: 40%;
+    float: left;
+    margin-bottom: -1000px;
+    padding-bottom: 1000px;
+    text-align: center;
+    margin-right: 1rem;
+    min-height: 100vh;
+    background-color: $color-white;
+    opacity: 0.92;
+    box-shadow: 1px 1px 2px $color-yellow-light;
+    .user-information {
+      text-align: left;
+      padding-left: 2rem;
+    }
+    span {
+      margin-left: 1rem;
+    }
+    img {
+      width: 10rem;
+      margin: 2rem;
+      border-radius: 50%;
+      border: 3px solid $color-blue;
+    }
+    .admin {
+      background-color: $color-yellow-light;
+      padding: 0.2rem;
+      height: 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.7rem;
+      border-radius: 8px;
+    }
+  }
+}
