@@ -6,6 +6,7 @@
     flex-direction: column;
     height: 100%;
     position: fixed;
+    z-index: 100;
 
     .sidebar-option {
         align-items: center;
