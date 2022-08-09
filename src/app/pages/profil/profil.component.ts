@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class ProfilComponent implements OnInit {
   display: Boolean = false;
+  hide: Boolean = true;
 
   constructor() { }
 
@@ -15,6 +16,7 @@ export class ProfilComponent implements OnInit {
 
   displayForm() {
     this.display = true;
+    this.hide = false;
   }
 
   onSubmitForm() {
