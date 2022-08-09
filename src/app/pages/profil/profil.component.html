@@ -50,11 +50,11 @@
         </div>
       </div>
     </div>
-    <div *ngIf="display" class=""><!-- mettre class d-flex flex-justify-content-center -->
-      <app-button (Click)="onSubmitForm()" text="Annuler">
+    <div *ngIf="display" class="d-flex flex-justify-content-center">
+      <app-button theme="secondary" (Click)="onSubmitForm()" text="Annuler">
         <input type="submit">
       </app-button>
-      <app-button (Click)="onSubmitForm()" text="Modifier">
+      <app-button theme="primary" (Click)="onSubmitForm()" text="Modifier">
         <input type="submit">
       </app-button>
     </div>
