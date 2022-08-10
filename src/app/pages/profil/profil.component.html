@@ -51,7 +51,7 @@
           <input type="text" name="city" placeholder="Ville" id="CityInput" [(ngModel)]="city"/>
         </div>
         <div *ngIf="display" class=""><!-- mettre class d-flex flex-justify-content-center -->
-          <app-button (Click)="onSubmitForm()" text="Annuler">
+          <app-button (click)="cancelForm()" text="Annuler">
             <input type="submit">
           </app-button>
           <app-button (Click)="onSubmitForm()" text="Modifier">
