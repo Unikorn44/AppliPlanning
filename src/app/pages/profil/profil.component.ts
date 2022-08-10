@@ -37,6 +37,7 @@ export class ProfilComponent implements OnInit {
   }
 
   public cancelForm() {
-    window.location.reload();
+    this.display = false;
+    this.hide = true;
   }
 }
