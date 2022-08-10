@@ -240,6 +240,10 @@ justify-content: space-around
   width: 30vh;
 }
 
+.bd-radius {
+  border-radius: $border-radius-8;
+}
+
 //text
 .text-center{
   text-align: center

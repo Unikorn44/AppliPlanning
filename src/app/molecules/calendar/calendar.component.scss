@@ -1,0 +1,54 @@
+@import "../../../assets/stylesheet/variables";
+
+.calendar {
+    background-image: radial-gradient(circle at center right, rgb(255,234,192),#ecc079);
+    border-radius: $border-radius-8;
+    overflow: auto;
+
+    .calendar-content {
+        .week-number {
+            align-items: center;
+            background-image: radial-gradient(circle at center left, #e9b968,#ffd98f); 
+            border-radius: $border-radius-8 $border-radius-8 0 0;
+            color: $color-white;
+            display: flex;
+            justify-content: space-between;
+            padding: 3vh 2vh;
+
+            p {
+                color: $color-black;
+            }
+        }
+
+        .week-number-button {
+            align-items: center;
+            background-color: #FFE5B4;
+            border-radius: 50%;
+            color: $color-black;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            height: 3vh;
+            width: 3vh;
+        }
+    }
+
+    .options {
+        display: flex;
+        justify-content: space-around;
+        margin: 2vh;
+
+        p {
+            cursor: pointer;
+            background-color: $color-black;
+            border-radius: $border-radius-8;
+            color: $color-white;
+            padding: 1vh 2vh;
+
+            &:hover, &:active{
+                background-color: $color-black-light;
+                color: $color-yellow-light;
+            }
+        }
+    }
+}
