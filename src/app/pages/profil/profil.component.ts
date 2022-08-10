@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profil',
@@ -17,8 +16,6 @@ export class ProfilComponent implements OnInit {
   public email!: string;
   public city!: string;
 
-  constructor(private router: Router) { }
-
   ngOnInit(): void {
   }
 
@@ -34,8 +31,6 @@ export class ProfilComponent implements OnInit {
     console.log(this.phone_number);
     console.log(this.email);
     console.log(this.city);
-    console.log("hello");
-
   }
 
   public cancelForm() {
