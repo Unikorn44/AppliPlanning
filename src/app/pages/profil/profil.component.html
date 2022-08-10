@@ -1,6 +1,6 @@
 <div class="container d-flex flex-justify-content-center zone-center p-10">
   <div class="secondary-zone">
-    <form (ngSubmit)="onSubmitForm()">
+    <form>
       <div class="d-flex flex-justify-content-space-around">
         <mat-icon (click)="displayForm()" aria-hidden="false" aria-label="Contact icon" fontIcon="edit" class="mt-30"></mat-icon>
         <img src="../../../assets/images/logo.png" alt="Photo profil">
@@ -50,40 +50,11 @@
           <label for="city">Ville*</label>
           <input type="text" name="city" placeholder="Ville" id="CityInput" [(ngModel)]="city"/>
         </div>
-        <div *ngIf="display" class=""><!-- mettre class d-flex flex-justify-content-center -->
-          <app-button (click)="cancelForm()" text="Annuler">
-            <input type="submit">
-          </app-button>
-          <app-button (Click)="onSubmitForm()" text="Modifier">
-            <input type="submit">
-          </app-button>
-        </div>
       </div>
-      <div *ngIf="display" class="p-10 card-input d-flex flex-column">
-        <label for="Phone">Numéro de téléphone*</label>
-        <input type="text" name="Phone" placeholder="Numéro de téléphone" id="PhoneInput"/>
-      </div>
-      <div *ngIf="hide">
-        <mat-icon aria-hidden="false" aria-label="Contact icon" fontIcon="mail_outline" class="mt-30"></mat-icon>
-        <span>test@m2iformation.fr</span>
-      </div>
-      <div *ngIf="display" class="p-10 card-input d-flex flex-column">
-        <label for="email">Email*</label>
-        <input type="text" name="email" placeholder="Email" id="EmailInput"/>
-      </div>
-      <div *ngIf="hide">
-        <mat-icon aria-hidden="false" aria-label="Contact icon" fontIcon="place" class="mt-30"></mat-icon>
-        <span>Lyon</span>
-      </div>
-      <div *ngIf="display" class="p-10 card-input d-flex flex-column">
-        <label for="city">Ville*</label>
-        <input type="text" name="city" placeholder="Ville" id="CityInput"/>
-      </div>
+
       <div *ngIf="display" class="d-flex flex-justify-content-center">
-        <app-button theme="secondary" (Click)="onSubmitForm()" text="Annuler">
-          <input type="submit">
-        </app-button>
-        <app-button theme="primary" (Click)="onSubmitForm()" text="Modifier">
+        <app-button theme="secondary" (Click)="cancelForm()" text="Annuler"></app-button>
+        <app-button theme="primary" (click)="onSubmitForm()" text="Modifier">
           <input type="submit">
         </app-button>
       </div>

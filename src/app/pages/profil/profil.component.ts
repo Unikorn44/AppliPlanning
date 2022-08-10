@@ -34,6 +34,8 @@ export class ProfilComponent implements OnInit {
     console.log(this.phone_number);
     console.log(this.email);
     console.log(this.city);
+    console.log("hello");
+
   }
 
   public cancelForm() {
