@@ -1,14 +1,17 @@
 @import "../../../assets/stylesheet/variables";
 
   button {
-    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
   }
 
   .btn {
     margin-bottom: 3rem;
     border-radius: 50px;
-    cursor: pointer;
     transition: 0.5s;
+    button {
+      cursor: pointer;
+    }
     &:hover {
       transition: 0.5s;
     }
@@ -20,15 +23,19 @@
     border: none;
     display: block;
     background-color: $color-blue;
-    // h3
-    font-family: $headers-font;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: $color-yellow;
+    button {
+      // h3
+      font-family: $headers-font;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: $color-yellow;
+    }
     &:hover {
       background-color: $color-yellow;
-      color: $color-blue;
+      button {
+        color: $color-blue;
+      }
     }
   }
 
@@ -37,16 +44,20 @@
     padding: 5px 10px;
     border: none;
     margin-left: 2rem;
-    // h5
-    font-family: $headers-font;
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.2;
     background-color: $color-blue;
-    color: $color-yellow;
+    button {
+      // h5
+      font-family: $headers-font;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: $color-yellow;
+    }
     &:hover {
       background-color: $color-yellow;
-      color: $color-blue;
+      button {
+        color: $color-blue;
+      }
     }
   }
 
@@ -55,14 +66,18 @@
     padding: 5px 10px;
     border: none;
     border: 1px solid $color-yellow;
-    // h5
-    font-family: $headers-font;
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: $color-black;
+    button {
+      // h5
+      font-family: $headers-font;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: $color-black;
+    }
     &:hover {
       background-color: $color-yellow;
-      color: $color-blue;
+      button {
+        color: $color-blue;
+      }
     }
   }
