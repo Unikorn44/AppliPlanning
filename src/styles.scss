@@ -54,6 +54,7 @@ h2 {
   color: $color-black;
 }
 
+// attention si modification de h3 modifier également button.scss pour btn-primary
 h3 {
   font-family: $headers-font;
   font-size: 2rem;
@@ -62,6 +63,7 @@ h3 {
   color: $color-yellow;
 }
 
+// attention si modification de h4 modifier également button.scss pour btn-secondary
 h4 {
   font-family: $headers-font;
   font-size: 1.5rem;

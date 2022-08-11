@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -13,6 +13,17 @@ export class ButtonComponent implements OnInit {
 	set text(name: string) {
 		this.buttonText = name.toUpperCase();
 	}
+
+  @Input() theme!: string;
+
+  @HostBinding("class")
+  get hostClasses(): string {
+    let classes = ["btn"];
+    if (this.theme) {
+      classes.push(`btn-${this.theme}`);
+    }
+    return classes.join(" ");
+  }
 
 	constructor() {}
 
