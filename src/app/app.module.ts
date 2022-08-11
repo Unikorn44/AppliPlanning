@@ -12,6 +12,7 @@ import { EventcardComponent } from './molecules/eventcard/eventcard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ListDayEventComponent } from './molecules/calendar/list-day-event/list-day-event.component';
+import { ListPlanningContactComponent } from './molecules/list-planning-contact/list-planning-contact.component';
 import { NavbarComponent } from './molecules/navbar/navbar.component';
 import { ProfilComponent } from './pages/profil/profil.component';
 import { PlanningComponent } from './pages/planning/planning.component';
@@ -36,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     CalendarComponent,
     ListDayEventComponent,
     DayEventComponent,
+    ListPlanningContactComponent,
   ],
   imports: [
     BrowserModule,

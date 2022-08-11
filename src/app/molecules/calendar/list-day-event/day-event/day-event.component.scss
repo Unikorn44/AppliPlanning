@@ -3,11 +3,11 @@
 div {
     margin: 1vh;
     padding: 2vh;
-    background-color: #fdf2e0be;
+    background-color: $color-beige-light;
     border-radius: $border-radius-8;
     cursor: pointer;
 
     &:hover{
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: $color-white;
     }
 }

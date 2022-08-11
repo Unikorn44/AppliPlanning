@@ -1,14 +1,14 @@
 @import "../../../assets/stylesheet/variables";
 
 .calendar {
-    background-image: radial-gradient(circle at center right, rgb(255,234,192),#ecc079);
+    background-image: $background-color-yellow-light;
     border-radius: $border-radius-8;
     overflow: auto;
 
     .calendar-content {
         .week-number {
             align-items: center;
-            background-image: radial-gradient(circle at center left, #e9b968,#ffd98f); 
+            background-image: $background-color-yellow;
             border-radius: $border-radius-8 $border-radius-8 0 0;
             color: $color-white;
             display: flex;
@@ -22,7 +22,7 @@
 
         .week-number-button {
             align-items: center;
-            background-color: #FFE5B4;
+            background-color: $color-beige;
             border-radius: 50%;
             color: $color-black;
             cursor: pointer;
