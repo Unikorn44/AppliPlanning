@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPlanningContactComponent implements OnInit {
 
+  arrayUser = [
+    {
+      first_name : "Dargo",
+      last_name : "Pierre"
+    },
+    {
+      first_name : "Harcher",
+      last_name : "Jean"
+    },
+    {
+      first_name : "Yusha",
+      last_name : "Tom"
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

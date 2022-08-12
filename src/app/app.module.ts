@@ -16,6 +16,7 @@ import { ListPlanningContactComponent } from './molecules/list-planning-contact/
 import { NavbarComponent } from './molecules/navbar/navbar.component';
 import { ProfilComponent } from './pages/profil/profil.component';
 import { PlanningComponent } from './pages/planning/planning.component';
+import { PlanningContactComponent } from './molecules/list-planning-contact/planning-contact/planning-contact.component';
 import { SidebarComponent } from './molecules/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
@@ -38,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     ListDayEventComponent,
     DayEventComponent,
     ListPlanningContactComponent,
+    PlanningContactComponent,
   ],
   imports: [
     BrowserModule,

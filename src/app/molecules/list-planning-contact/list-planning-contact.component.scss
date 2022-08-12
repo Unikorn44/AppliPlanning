@@ -1,0 +1,23 @@
+@import "../../../assets/stylesheet/variables";
+
+.list-planning-contact {
+    background-image: $background-color-yellow-light;
+    border-radius: $border-radius-8;
+    overflow: auto;
+
+    .list-planning-contact-header {
+        background-color : $color-black;
+        overflow: auto;
+        
+        p {
+            color: $color-white;
+            font-size: xx-large;
+            margin: 2vh 3vh;
+        }
+    }
+
+    .list-planning-contact-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
