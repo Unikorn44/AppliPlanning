@@ -1,0 +1,47 @@
+@import "../../../../../assets/stylesheet/variables";
+
+.event-details {
+    margin: 1vh;
+    border-radius: $border-radius-8;
+    cursor: pointer;
+
+    &.free {
+        background-color: $color-green;
+
+        .event-details-header {
+            background-color: $color-green-dark;
+        }
+    }
+
+    &.conflict {
+        background-color: $color-red-light;
+
+        .event-details-header {
+            background-color: $color-red;
+        }
+    }
+    
+    .event-details-header {
+        align-items: center;
+        border-radius: $border-radius-8 $border-radius-8 0 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1vh;
+
+        .id-event {
+            font-size: small;
+        }
+
+        .event-details-time {
+            text-align: right;
+        }
+    }
+
+    .event-details-content {
+        padding: 1vh 2vh;
+
+        .description {
+
+        }
+    }
+}

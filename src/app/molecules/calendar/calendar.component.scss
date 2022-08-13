@@ -1,10 +1,6 @@
 @import "../../../assets/stylesheet/variables";
 
 .calendar {
-    background-image: $background-color-yellow-light;
-    border-radius: $border-radius-8;
-    overflow: auto;
-
     .calendar-content {
         .week-number {
             align-items: center;
@@ -30,25 +26,6 @@
             justify-content: center;
             height: 3vh;
             width: 3vh;
-        }
-    }
-
-    .options {
-        display: flex;
-        justify-content: space-around;
-        margin: 2vh;
-
-        p {
-            cursor: pointer;
-            background-color: $color-black;
-            border-radius: $border-radius-8;
-            color: $color-white;
-            padding: 1vh 2vh;
-
-            &:hover, &:active{
-                background-color: $color-black-light;
-                color: $color-yellow-light;
-            }
         }
     }
 }
