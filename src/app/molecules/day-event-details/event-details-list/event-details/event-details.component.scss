@@ -6,16 +6,12 @@
     cursor: pointer;
 
     &.free {
-        background-color: $color-green;
-
         .event-details-header {
-            background-color: $color-green-dark;
+            background-color: $color-green;
         }
     }
 
     &.conflict {
-        background-color: $color-red-light;
-
         .event-details-header {
             background-color: $color-red;
         }
@@ -38,6 +34,8 @@
     }
 
     .event-details-content {
+        background-color: $color-beige-light;
+        border-radius: 0 0 $border-radius-8 $border-radius-8;
         padding: 1vh 2vh;
     }
 }
