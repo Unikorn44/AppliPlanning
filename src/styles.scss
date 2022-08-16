@@ -169,8 +169,8 @@ span {
 .flex-justify-content-center {
   justify-content: center;
 }
-.flex-justify-content-space-around{
-justify-content: space-around
+.flex-justify-content-space-around {
+  justify-content: space-around
 }
 
 .flex-justify-content-between {
@@ -195,6 +195,10 @@ justify-content: space-around
 
 .flex-50 {
   flex: 1 1 50%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 // utils

@@ -8,12 +8,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfilComponent } from './pages/profil/profil.component';
 import { PlanningComponent } from './pages/planning/planning.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'contact', component: ContactComponent},
   { path: 'profil', component: ProfilComponent},
   { path: 'planning', component: PlanningComponent}
 ];

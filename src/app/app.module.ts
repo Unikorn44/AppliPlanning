@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ButtonComponent } from './atomes/button/button.component';
 import { CalendarComponent } from './molecules/calendar/calendar.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ContactCardComponent } from './molecules/contact-card-list/contact-card/contact-card.component';
+import { ContactCardListComponent } from './molecules/contact-card-list/contact-card-list.component';
 import { DayEventComponent } from './molecules/calendar/list-day-event/day-event/day-event.component';
 import { DayEventDetailsComponent } from './molecules/day-event-details/day-event-details.component';
 import { DailyWeatherComponent } from './molecules/daily-weather/daily-weather.component';
@@ -29,6 +32,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AccueilComponent,
     AppComponent,
+    ContactComponent,
+    ContactCardComponent,
+    ContactCardListComponent,
     DailyWeatherComponent,
     EventcardComponent,
     HomeComponent,
@@ -45,7 +51,7 @@ import { FormsModule } from '@angular/forms';
     PlanningContactComponent,
     DayEventDetailsComponent,
     EventDetailsListComponent,
-    EventDetailsComponent,
+    EventDetailsComponent
   ],
   imports: [
     BrowserModule,
