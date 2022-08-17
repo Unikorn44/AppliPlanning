@@ -1,4 +1,4 @@
-import { Event } from "../atomes/button/event";
+import { Event } from "../atomes/event";
 
 //création ArrayList EVENTS composée d''éléments type Event
 export const EVENTS: Event[] = 
