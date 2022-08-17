@@ -8,6 +8,7 @@ import * as $ from 'jquery';
 })
 export class DailyWeatherComponent implements OnInit {
 
+  // !!! PENSER A MODIFIER VILLE !!!
   public meteoData: any;
   public ville: String = "paris";
 
