@@ -1,0 +1,13 @@
+@import "../../../../assets/stylesheet/variables";
+
+p {
+    margin: 1vh;
+    padding: 2vh;
+    background-color: $color-beige-light;
+    border-radius: $border-radius-8;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-white;
+    }
+}

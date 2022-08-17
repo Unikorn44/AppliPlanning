@@ -1,0 +1,10 @@
+<div class="component list-planning-contact">
+    <div class="list-planning-contact-header">
+        <p>Mes contacts</p>
+    </div>
+    <ul class="list-planning-contact-content">
+        <li *ngFor="let contact of arrayUser">
+            <app-planning-contact [dataContact]="contact"></app-planning-contact>
+        </li>
+    </ul>
+</div>

@@ -111,6 +111,31 @@ span {
   max-width: 100vw;
 }
 
+.component {
+  background-image: $background-color-yellow-light;
+  border-radius: $border-radius-8;
+  overflow: auto;
+
+  .component-options {
+      display: flex;
+      justify-content: space-around;
+      margin: 2vh;
+
+      p {
+          cursor: pointer;
+          background-color: $color-black;
+          border-radius: $border-radius-8;
+          color: $color-white;
+          padding: 1vh 2vh;
+
+          &:hover, &:active{
+              background-color: $color-black-light;
+              color: $color-yellow-light;
+          }
+      }
+  }
+}
+
 .image-home {
   align-items: center;
   flex-direction: column;
@@ -144,8 +169,8 @@ span {
 .flex-justify-content-center {
   justify-content: center;
 }
-.flex-justify-content-space-around{
-justify-content: space-around
+.flex-justify-content-space-around {
+  justify-content: space-around
 }
 
 .flex-justify-content-between {
@@ -170,6 +195,10 @@ justify-content: space-around
 
 .flex-50 {
   flex: 1 1 50%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 // utils
@@ -240,6 +269,10 @@ justify-content: space-around
 
 .width-30{
   width: 30vh;
+}
+
+.bd-radius {
+  border-radius: $border-radius-8;
 }
 
 //text
