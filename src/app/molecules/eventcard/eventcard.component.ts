@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EVENTS } from 'src/app/mock/events';
-import { EventServiceService } from 'src/app/event-service.service';
+import { EventServiceService } from 'src/app/services/event-service.service';
 import { Event } from 'src/app/atomes/event';
 
 @Component({
