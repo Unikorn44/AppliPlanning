@@ -12,7 +12,6 @@ import { ContactCardListComponent } from './molecules/contact-card-list/contact-
 import { DayEventComponent } from './molecules/calendar/list-day-event/day-event/day-event.component';
 import { DayEventDetailsComponent } from './molecules/day-event-details/day-event-details.component';
 import { DailyWeatherComponent } from './molecules/daily-weather/daily-weather.component';
-import { EventcardComponent } from './molecules/eventcard/eventcard.component';
 import { EventDetailsComponent } from './molecules/event-details-list/event-details/event-details.component';
 import { EventDetailsListComponent } from './molecules/event-details-list/event-details-list.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -36,7 +35,6 @@ import { FormsModule } from '@angular/forms';
     ContactCardComponent,
     ContactCardListComponent,
     DailyWeatherComponent,
-    EventcardComponent,
     HomeComponent,
     NavbarComponent,
     SidebarComponent,

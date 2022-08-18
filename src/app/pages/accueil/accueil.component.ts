@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EventcardComponent } from '../../molecules/eventcard/eventcard.component';
-
+import { EventService } from 'src/app/services/event.service';
+import { Event } from 'src/app/atomes/event';
 
 @Component({
   selector: 'app-acceuil',
@@ -10,11 +10,18 @@ import { EventcardComponent } from '../../molecules/eventcard/eventcard.componen
 
 export class AccueilComponent implements OnInit {
 
-  constructor() { }
+  //import du tableau des events, nommé EVENTS
+  events: Event[]= [];
+
+  //injection EventService
+  constructor(private eventService: EventService) { }
 
   ngOnInit(): void {
+    this.getEvents();
   }
 
-
-
+  //subscribe pour récupérer le "Observable" en asynchrone
+  getEvents(): void {
+    this.eventService.getEvents().subscribe(events => this.events = events);
+  }
 }
