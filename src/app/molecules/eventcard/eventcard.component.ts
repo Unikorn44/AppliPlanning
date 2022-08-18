@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EVENTS } from 'src/app/mock/events';
-import { EventServiceService } from 'src/app/services/event-service.service';
+import { EventService } from 'src/app/services/event.service';
 import { Event } from 'src/app/atomes/event';
 
 @Component({
@@ -14,7 +13,7 @@ export class EventcardComponent implements OnInit {
   events: Event[]= [];
 
   //injection EventService
-  constructor(private eventService: EventServiceService) { }
+  constructor(private eventService: EventService) { }
 
   ngOnInit(): void {
     this.getEvents();
