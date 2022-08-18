@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EVENTS } from 'src/app/mock/events';
+import { EventService } from 'src/app/services/event.service';
+import { Event } from 'src/app/atomes/event';
 
 @Component({
   selector: 'app-eventcard',
@@ -9,11 +10,18 @@ import { EVENTS } from 'src/app/mock/events';
 export class EventcardComponent implements OnInit {
 
   //import du tableau des events, nommé EVENTS
-  events = EVENTS;
+  events: Event[]= [];
 
-  constructor() { }
+  //injection EventService
+  constructor(private eventService: EventService) { }
 
   ngOnInit(): void {
+    this.getEvents();
+  }
+
+  //subscribe pour récupérer le "Observable" en asynchrone
+  getEvents(): void {
+    this.eventService.getEvents().subscribe(events => this.events = events);
   }
 
 }
