@@ -13,8 +13,8 @@ import { DayEventComponent } from './molecules/calendar/list-day-event/day-event
 import { DayEventDetailsComponent } from './molecules/day-event-details/day-event-details.component';
 import { DailyWeatherComponent } from './molecules/daily-weather/daily-weather.component';
 import { EventcardComponent } from './molecules/eventcard/eventcard.component';
-import { EventDetailsComponent } from './molecules/day-event-details/event-details-list/event-details/event-details.component';
-import { EventDetailsListComponent } from './molecules/day-event-details/event-details-list/event-details-list.component';
+import { EventDetailsComponent } from './molecules/event-details-list/event-details/event-details.component';
+import { EventDetailsListComponent } from './molecules/event-details-list/event-details-list.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ListDayEventComponent } from './molecules/calendar/list-day-event/list-day-event.component';

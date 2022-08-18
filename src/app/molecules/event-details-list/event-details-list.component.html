@@ -1,0 +1,10 @@
+<div class="event-details-list">
+    <div class="event-details-list-header">
+        <p>Journée du Mardi 15/16/16</p>
+    </div>
+    <ul>
+        <li *ngFor="let event of arrayEvent">
+            <app-event-details [event]="event"></app-event-details>
+        </li>
+    </ul>
+</div>
