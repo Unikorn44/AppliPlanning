@@ -28,8 +28,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 
-import { EventService } from './services/event.service';
-
 @NgModule({
   declarations: [
     AccueilComponent,
@@ -62,9 +60,7 @@ import { EventService } from './services/event.service';
     MatIconModule,
     FormsModule,
   ],
-  providers: [
-    EventService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

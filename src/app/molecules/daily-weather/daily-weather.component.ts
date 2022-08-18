@@ -10,11 +10,13 @@ export class DailyWeatherComponent implements OnInit {
 
   // !!! PENSER A MODIFIER VILLE !!!
   public meteoData: any;
-  public ville: String = "paris";
+  public dataJSON: any;
+  public ville: string = "paris";
 
-  ngOnInit(): void {
-    this.meteoWidget();
+  ngOnInit(): any {
+    this.meteoWidget(); 
   }
+
 
   public meteoWidget(){
     let dataJSON = $.getJSON("https://www.prevision-meteo.ch/services/json/" + this.ville , (data) =>{

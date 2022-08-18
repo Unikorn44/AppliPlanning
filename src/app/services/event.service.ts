@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 
-
 import { Event } from '../atomes/event';
 import { EVENTS } from '../mock/events';
 
@@ -10,7 +9,7 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class EventServiceService {
+export class EventService {
 
   constructor() { }
 
@@ -18,6 +17,4 @@ export class EventServiceService {
     const events = of(EVENTS);
     return events;
   }
-
-
 }
