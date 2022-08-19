@@ -1,9 +1,11 @@
-<div class="m-1 p-10 width-30 height-25 blue ">
-    <p>Météo du jour</p>
-    <p>Ville de {{ville | uppercase}} </p>
-    <p>Journée du {{meteoData.date}}</p>
-    <p>Température min: {{meteoData.tmin}}°</p>
-    <p>Température max: {{meteoData.tmax}}°</p>
-    <img src={{meteoData.icon}} height="45px" width="45px">
+<div class="daily-weather">
+    <div class="daily-weather-header">
+        <p class="ville">{{ville | uppercase}}</p>
+        <img src={{meteoData.icon}} height="45px" width="45px">
+    </div>
+    <div class="daily-weather-content">
+        <p>{{meteoData.date}}</p>
+        <p>{{meteoData.tmin}}° - {{meteoData.tmax}}°</p>
+    </div>
 </div>    
 
