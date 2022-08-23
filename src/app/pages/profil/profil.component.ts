@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from 'src/app/databaseTemplate/user';
 
 @Component({
   selector: 'app-profil',
@@ -9,6 +11,8 @@ export class ProfilComponent implements OnInit {
   public display: Boolean = false;
   public hide: Boolean = true;
 
+  public user!: User;
+
   public last_name!: string;
   public first_name!: string;
   public birth_date!: string;
@@ -16,7 +20,11 @@ export class ProfilComponent implements OnInit {
   public email!: string;
   public city!: string;
 
+  constructor(public http: HttpClient) {
+  }
+
   ngOnInit(): void {
+    this.getUser();
   }
 
   public displayForm() {
@@ -36,5 +44,12 @@ export class ProfilComponent implements OnInit {
   public cancelForm() {
     this.display = false;
     this.hide = true;
+  }
+
+  public getUser() {
+    return this.http.get<User>('http://localhost:8080/Jpa/api/user/1')
+      .subscribe(data => {
+        this.user = data;
+      })
   }
 }

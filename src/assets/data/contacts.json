@@ -1,0 +1,4 @@
+[
+  { "id":1, "id_first_user":1, "id_second_user":2 },
+  { "id":2, "id_first_user":1, "id_second_user":3 }
+]
