@@ -25,7 +25,9 @@ import { PlanningContactComponent } from './molecules/list-planning-contact/plan
 import { SidebarComponent } from './molecules/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './services/AuthService';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,8 +59,12 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatIconModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

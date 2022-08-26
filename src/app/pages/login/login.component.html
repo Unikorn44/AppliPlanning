@@ -1,14 +1,14 @@
 <div class="image-home">
   <div class="card-form">
 
-    <form (ngSubmit)="onSubmitForm()">
+    <form (ngSubmit)="login()" [formGroup]="form">
       <div class="p-10 card-input">
-        <input type="text" name="identifiant" placeholder="identifiant" id="identifiantInput" [(ngModel)]="identifiant"/>
+        <input name="identifiant" placeholder="identifiant" id="identifiantInput" formControlName="identifiant"/>
       </div>
       <div class="p-10 card-input">
-        <input type="text" name="password" placeholder="mot de passe" id="passwordInput" [(ngModel)]="password"/>
+        <input type="password" name="password" placeholder="mot de passe" id="passwordInput" formControlName="password"/>
       </div>
-      <app-button theme="big" (Click)="onSubmitForm()" text="Login" type="submit"></app-button>
+      <app-button theme="big" text="Login" type="submit"></app-button>
     </form>
 
   </div>
