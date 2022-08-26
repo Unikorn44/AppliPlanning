@@ -9,7 +9,7 @@ export class AuthService {
   }
 
   login(identifiant: string, password: string) {
-    return this.http.post(configServer.origin_server + "/api/user/update", { identifiant, password })
+    return this.http.post(configServer.origin_server + "/api/login", { identifiant, password })
     // shareReplay pour empêcher le récepteur de déclencher accidentellement plusieurs requêtes POST
     .pipe(shareReplay());
   }

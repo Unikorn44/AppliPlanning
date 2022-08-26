@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { AppComponent } from './app.component';
@@ -23,11 +26,8 @@ import { ProfilComponent } from './pages/profil/profil.component';
 import { PlanningComponent } from './pages/planning/planning.component';
 import { PlanningContactComponent } from './molecules/list-planning-contact/planning-contact/planning-contact.component';
 import { SidebarComponent } from './molecules/sidebar/sidebar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/AuthService';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
