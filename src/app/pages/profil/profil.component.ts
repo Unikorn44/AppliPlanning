@@ -51,7 +51,6 @@ export class ProfilComponent implements OnInit {
       .subscribe(data => {
         this.user = data;
         console.log(data);
-
       })
   }
 }
