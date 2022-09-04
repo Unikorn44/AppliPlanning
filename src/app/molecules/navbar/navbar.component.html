@@ -4,6 +4,6 @@
     <h4 class="p-30">Accueil</h4>
   </div>
   <div class="d-flex flex-align-items-center">
-    <h4 class="p-30">Connexion</h4>
+    <app-button theme="big" *ngIf="!loginDisplay" text="Déconnexion" (click)="logOut()"></app-button>
   </div>
 </nav>
