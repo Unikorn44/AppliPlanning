@@ -15,6 +15,7 @@ export class ProfilComponent implements OnInit {
   public user!: User;
 
   private tokenBaerer : any = localStorage.getItem('tokenBaerer');
+  private id = localStorage.getItem('id');
 
   private headers = new HttpHeaders({'Authorization': this.tokenBaerer});
 
@@ -34,9 +35,7 @@ export class ProfilComponent implements OnInit {
   }
 
   private getUser() {
-    console.log(localStorage.getItem('tokenBaerer'));
-
-    return this.http.get<User>(configServer.origin_server + "/api/user/1",  {headers: this.headers})
+    return this.http.get<User>(configServer.origin_server + "/api/user/" + this.id,  {headers: this.headers})
       .subscribe(data => {
         this.user = data;
         this.user.admin = data.admin;

@@ -20,6 +20,7 @@ export class AuthService {
       .pipe(shareReplay())
       .subscribe(response=> {
         let respHeaders = response;
+
         const mapHeaders = new Map(Object.entries(respHeaders));
         const mapAuth = new Map(Object.entries(mapHeaders.get('headers')));
 
@@ -29,6 +30,16 @@ export class AuthService {
             this.saveToken(value);
           }
         });
+
+        const mapBody = new Map(Object.entries(mapHeaders.get('body')));
+
+        mapBody.forEach((value: any, key: any) => {
+          if(key == "id") {
+            value = value.toString();
+            this.saveId(value);
+          }
+        });
+
     });
   }
 
@@ -36,7 +47,12 @@ export class AuthService {
     localStorage.setItem("tokenBaerer", token);
   }
 
+  saveId(id: string) {
+    localStorage.setItem("id", id);
+  }
+
   logout() {
     localStorage.removeItem("tokenBaerer");
+    localStorage.removeItem("id");
   }
 }
