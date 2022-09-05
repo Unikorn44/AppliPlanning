@@ -8,7 +8,6 @@ import configServer from "../../Resources/configServer.json";
 export class AuthService {
 
   private headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
-  public log = false;
 
   constructor(private http: HttpClient) {
   }
@@ -29,7 +28,6 @@ export class AuthService {
           if(key == "authorization") {
             value = value.toString();
             this.saveToken(value);
-            this.log = true;
           }
         });
     });
@@ -41,7 +39,6 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem("tokenBaerer");
-    this.log = false;
   }
 }
 
