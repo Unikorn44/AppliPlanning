@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
 
   public login(): void {
     const val = this.form.value;
-
     if(val.identifiant && val.password) {
       this.authService.login(val.identifiant, val.password);
       this.router.navigateByUrl('/accueil');

@@ -37,8 +37,6 @@ export class AuthService {
 
   saveToken(token: string) {
     localStorage.setItem("tokenBaerer", token);
-    console.log(localStorage.getItem("tokenBaerer"));
-
   }
 
   logout() {

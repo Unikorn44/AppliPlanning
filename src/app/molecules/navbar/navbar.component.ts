@@ -9,17 +9,22 @@ import { AuthService } from 'src/app/services/AuthService';
 })
 export class NavbarComponent implements OnInit {
 
-  public loginDisplay = false;
+  public loginDisplay: boolean = true;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {
+    if (localStorage.getItem('tokenBaerer') != null) {
+      this.loginDisplay = false;
+    }
+  }
 
   ngOnInit(): void {
   }
 
   logOut() {
     this.authService.logout();
-    if (this.authService.log == false) {
-      this.loginDisplay = true;
+    if (localStorage.getItem('tokenBaerer') != null) {
+      this.loginDisplay = false;
+    } else {
       this.router.navigateByUrl('/');
     }
   }
