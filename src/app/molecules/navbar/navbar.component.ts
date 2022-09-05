@@ -12,12 +12,12 @@ export class NavbarComponent implements OnInit {
   public loginDisplay: boolean = true;
 
   constructor(private authService: AuthService, private router: Router) {
-    if (localStorage.getItem('tokenBaerer') != null) {
-      this.loginDisplay = false;
-    }
   }
 
   ngOnInit(): void {
+    if (localStorage.getItem('tokenBaerer') != null) {
+      this.loginDisplay = false;
+    }
   }
 
   logOut() {

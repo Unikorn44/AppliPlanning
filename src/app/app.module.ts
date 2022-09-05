@@ -28,7 +28,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/AuthService';
-import { AuthInterceptor } from './services/AuthInterceptor';
 
 @NgModule({
   declarations: [
@@ -64,10 +63,7 @@ import { AuthInterceptor } from './services/AuthInterceptor';
     HttpClientModule,
   ],
   providers: [
-    AuthService,
-    {provide:HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi:true}],
+    AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

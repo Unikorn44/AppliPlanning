@@ -40,7 +40,3 @@ export class AuthService {
     localStorage.removeItem("tokenBaerer");
   }
 }
-
-// pour envoyer un token bearer
-//const header = new HttpHeaders({Authorization: 'Bearer'+(user.email+':'+user.phone)});
-//return this.http.post(http://localhost:8080/Jpa/api/users/login,user,{headers: header});

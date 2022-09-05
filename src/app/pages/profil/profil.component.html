@@ -3,11 +3,11 @@
     <div class="d-flex flex-justify-content-space-around">
       <mat-icon (click)="displayForm()" aria-hidden="false" aria-label="Contact icon" fontIcon="edit" class="mt-30"></mat-icon>
       <img src="../../../assets/images/logo.png" alt="Photo profil">
-      <p class="admin">Admin</p>
+      <p *ngIf="user.admin" class="admin">Admin</p>
     </div>
     <div *ngIf="hide" class="d-flex flex-justify-content-center">
-      <h3 class="p-10">Nom</h3>
-      <h3 class="p-10">Prénom</h3>
+      <h3 class="p-10">{{user.last_name}}</h3>
+      <h3 class="p-10">{{user.first_name}}</h3>
     </div>
     <div *ngIf="display" class="d-flex flex-justify-content-center">
       <div class="p-10 card-input d-flex flex-column">
@@ -19,15 +19,15 @@
         <input type="text" name="first_name" placeholder="Prenom" id="firstNameInput" [(ngModel)]="first_name"/>
       </div>
     </div>
-    <span *ngIf="hide"> mai 1989</span>
+    <span *ngIf="hide"> {{user.birthday_date}}</span>
     <div class="user-information">
-        <div *ngIf="display" class="p-10 card-input d-flex flex-column">
+      <div *ngIf="display" class="p-10 card-input d-flex flex-column">
         <label for="Birthday">Date de naissance*</label>
         <input type="text" name="Birthday" placeholder="Date de naissance" id="BirthdayInput" [(ngModel)]="birth_date"/>
       </div>
       <div *ngIf="hide">
         <mat-icon aria-hidden="false" aria-label="Contact icon" fontIcon="phone" class="mt-30"></mat-icon>
-        <span>04 72 89 76 56</span>
+        <span>{{user.phone_number}}</span>
       </div>
       <div *ngIf="display" class="p-10 card-input d-flex flex-column">
         <label for="Phone">Numéro de téléphone*</label>
@@ -35,7 +35,7 @@
       </div>
       <div *ngIf="hide">
         <mat-icon aria-hidden="false" aria-label="Contact icon" fontIcon="mail_outline" class="mt-30"></mat-icon>
-        <span>test@m2iformation.fr</span>
+        <span>{{user.email}}</span>
       </div>
       <div *ngIf="display" class="p-10 card-input d-flex flex-column">
         <label for="email">Email*</label>
@@ -43,7 +43,7 @@
       </div>
       <div *ngIf="hide">
         <mat-icon aria-hidden="false" aria-label="Contact icon" fontIcon="place" class="mt-30"></mat-icon>
-        <span>Lyon</span>
+        <span>{{user.city}}</span>
       </div>
       <div *ngIf="display" class="p-10 card-input d-flex flex-column">
         <label for="city">Ville*</label>
