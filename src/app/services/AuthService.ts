@@ -1,7 +1,6 @@
-import { HttpClient, HttpEventType, HttpHeaders, HttpResponse } from "@angular/common/http";
+import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import {map, shareReplay } from 'rxjs/operators';
+import { shareReplay } from 'rxjs/operators';
 import configServer from "../../Resources/configServer.json";
 
 @Injectable()
@@ -45,18 +44,3 @@ export class AuthService {
 // pour envoyer un token bearer
 //const header = new HttpHeaders({Authorization: 'Bearer'+(user.email+':'+user.phone)});
 //return this.http.post(http://localhost:8080/Jpa/api/users/login,user,{headers: header});
-
-
-
-// var user = this.http
-//   .post<User>(this.loginUrl, body, httpOptions)
-//   .pipe(map(event => {
-//       //the checking of the HttpEventType is not strictly necessary
-//       if (event.type == HttpEventType.Response)
-//       {
-//           let user = event.body;
-//           let headers = event.headers
-//           //do stuff with user data and headers
-//           return user;
-//       }
-//   }))
