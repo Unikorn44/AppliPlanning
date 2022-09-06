@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-list-day-event',
@@ -6,14 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-day-event.component.scss']
 })
 export class ListDayEventComponent implements OnInit {
+  @Input() listDayEvents: any;
 
-  dayEventArray!: string[]
-
-  constructor() { 
-    this.dayEventArray = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
+  today: Date;
+  
+  constructor() {
+    this.today = new Date();
   }
 
   ngOnInit(): void {
   }
-
+  
+  daysInTodayMonth() {
+    return new Date(this.today.getFullYear(), this.today.getMonth(), 0).getDate();
+  }
 }

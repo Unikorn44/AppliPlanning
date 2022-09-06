@@ -1,0 +1,9 @@
+ul {
+    display: grid;
+    margin: 0 2vh;
+
+    grid-template-columns: repeat(auto-fit, minmax(6vh, max-content));
+    grid-gap: 1vh;
+    justify-content: center;
+    padding: initial;
+}
