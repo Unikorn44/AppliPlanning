@@ -1,19 +1,23 @@
 import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 import { shareReplay } from 'rxjs/operators';
 import configServer from "../../Resources/configServer.json";
 import { User } from "../databaseTemplate/user";
+import { LocalStorageService } from "./local-storage.service";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class AuthService {
 
   private headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
 
   public user!: User;
 
-  public log!: boolean;
+  public log: boolean = false;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private localStorage: LocalStorageService, private router: Router) {
   }
 
   login(identifiant: string, password: string) {
@@ -50,7 +54,10 @@ export class AuthService {
 
   saveToken(token: string) {
     localStorage.setItem("tokenBaerer", token);
-    this.log = true;
+    this.router.navigateByUrl('/accueil')
+      .then(() => {
+        this.localStorage.refreshStorage();
+      });
   }
 
   saveId(id: string) {
@@ -58,8 +65,7 @@ export class AuthService {
   }
 
   logout() {
-    localStorage.removeItem("tokenBaerer");
-    localStorage.removeItem("id");
-    this.log = false;
+    localStorage.clear();
+    this.localStorage.refreshStorage();
   }
 }

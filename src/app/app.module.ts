@@ -27,8 +27,8 @@ import { SidebarComponent } from './molecules/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from './services/AuthService';
 import { AuthGuardService } from './guard/AuthGuardService';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
