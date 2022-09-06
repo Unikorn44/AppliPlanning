@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  isDisplayed = true;
+  isDisplayed = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    if (localStorage.getItem('tokenBaerer') != null) {
+      this.isDisplayed = true;
+    }
   }
-
 }
