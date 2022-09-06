@@ -10,12 +10,13 @@ export class CalendarComponent implements OnInit, OnChanges {
   @Input() dataEvents: any;
 
   filteredEvents: Map<number,EventCollab[]>
+  calendarDisplay:Date;
 
   dayStep: Date;
 
   constructor() { 
     this.dayStep = new Date();
-    this.dayStep = this.dayStep;
+    this.calendarDisplay = this.dayStep;
     this.filteredEvents = this.generateEmptyFilteredEvents();
   }
 
@@ -32,6 +33,8 @@ export class CalendarComponent implements OnInit, OnChanges {
     if (this.dataEvents.length != 0) {
       this.generateFilteredEvents(this.dataEvents);
     }
+
+    this.calendarDisplay = new Date(this.dayStep);
   }
   
   generateFilteredEvents (events: EventCollab[]) {
@@ -39,8 +42,8 @@ export class CalendarComponent implements OnInit, OnChanges {
     events.forEach( event => {
         const jourEvent = event.date_event.getDate();
         if (
-            (this.dayStep.getMonth()) == event.date_event.getMonth() &&
-            (this.dayStep.getFullYear == event.date_event.getFullYear)
+            (this.dayStep.getMonth() == event.date_event.getMonth()) &&
+            (this.dayStep.getFullYear() == event.date_event.getFullYear())
           ) {
           this.filteredEvents.get(jourEvent)?.push(event);
         }

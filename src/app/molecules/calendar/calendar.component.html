@@ -4,7 +4,7 @@
             <a class="week-number-button" (click)="removeMonth()">
                 <mat-icon aria-hidden="false" aria-label="Previous week" fontIcon="navigate_before"></mat-icon>
             </a>
-            <p>{{ dayStep | date: 'MMMM yyyy' }}</p>
+            <p>{{ calendarDisplay | date: 'MMMM yyyy' | titlecase }}</p>
             <a class="week-number-button" (click)="addMonth()">
                 <mat-icon aria-hidden="false" aria-label="Next week" fontIcon="navigate_next"></mat-icon>
             </a>
