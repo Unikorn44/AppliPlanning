@@ -28,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/AuthService';
+import { AuthGuardService } from './guard/AuthGuardService';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { AuthService } from './services/AuthService';
     HttpClientModule,
   ],
   providers: [
-    AuthService],
+    AuthService,
+    AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

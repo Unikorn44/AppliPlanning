@@ -2,11 +2,16 @@ import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { shareReplay } from 'rxjs/operators';
 import configServer from "../../Resources/configServer.json";
+import { User } from "../databaseTemplate/user";
 
 @Injectable()
 export class AuthService {
 
   private headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+
+  public user!: User;
+
+  public log!: boolean;
 
   constructor(private http: HttpClient) {
   }
@@ -45,6 +50,7 @@ export class AuthService {
 
   saveToken(token: string) {
     localStorage.setItem("tokenBaerer", token);
+    this.log = true;
   }
 
   saveId(id: string) {
@@ -54,5 +60,6 @@ export class AuthService {
   logout() {
     localStorage.removeItem("tokenBaerer");
     localStorage.removeItem("id");
+    this.log = false;
   }
 }
