@@ -10,11 +10,12 @@ export class CalendarComponent implements OnInit, OnChanges {
   @Input() dataEvents: any;
 
   filteredEvents: Map<number,EventCollab[]>
-  today: Date;
-  monthStep = 0;
+
+  dayStep: Date;
 
   constructor() { 
-    this.today = new Date();
+    this.dayStep = new Date();
+    this.dayStep = this.dayStep;
     this.filteredEvents = this.generateEmptyFilteredEvents();
   }
 
@@ -22,6 +23,10 @@ export class CalendarComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
+    this.update()
+  }
+
+  update() {
     this.filteredEvents = this.generateEmptyFilteredEvents();
 
     if (this.dataEvents.length != 0) {
@@ -33,7 +38,10 @@ export class CalendarComponent implements OnInit, OnChanges {
 
     events.forEach( event => {
         const jourEvent = event.date_event.getDate();
-        if ((this.today.getMonth() + this.monthStep) == event.date_event.getMonth()) {
+        if (
+            (this.dayStep.getMonth()) == event.date_event.getMonth() &&
+            (this.dayStep.getFullYear == event.date_event.getFullYear)
+          ) {
           this.filteredEvents.get(jourEvent)?.push(event);
         }
       }
@@ -42,17 +50,27 @@ export class CalendarComponent implements OnInit, OnChanges {
 
   generateEmptyFilteredEvents(){
     const tempMap = new Map<number, EventCollab[]>();
+    const months = Array.from(Array(this.daysInDayStepMonth()).keys())
 
-    for(const i in Array.from(Array(this.daysInTodayMonth()).keys())) {
-      if(Number(i) != 0){
-        tempMap.set(Number(i), []);
-      }
+    for(const i in months) {
+        tempMap.set(Number(i) + 1, []);
     }
 
     return tempMap;
   }
 
-  daysInTodayMonth() {
-    return new Date(this.today.getFullYear(), this.today.getMonth(), 0).getDate();
+  daysInDayStepMonth() {
+    const month = new Date(this.dayStep.getFullYear(), this.dayStep.getMonth() + 1, 0).getDate();
+    return month;
+  }
+
+  removeMonth() {
+    this.dayStep.setMonth(this.dayStep.getMonth() - 1);
+    this.update();
+  }
+
+  addMonth() {
+    this.dayStep.setMonth(this.dayStep.getMonth() + 1);
+    this.update();
   }
 }

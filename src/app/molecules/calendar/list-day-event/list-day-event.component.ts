@@ -7,17 +7,10 @@ import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 })
 export class ListDayEventComponent implements OnInit {
   @Input() listDayEvents: any;
-
-  today: Date;
   
   constructor() {
-    this.today = new Date();
   }
 
   ngOnInit(): void {
-  }
-  
-  daysInTodayMonth() {
-    return new Date(this.today.getFullYear(), this.today.getMonth(), 0).getDate();
   }
 }

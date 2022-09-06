@@ -1,11 +1,11 @@
 <div class="component calendar">
     <div class="calendar-content">
         <div class="week-number">
-            <a class="week-number-button">
+            <a class="week-number-button" (click)="removeMonth()">
                 <mat-icon aria-hidden="false" aria-label="Previous week" fontIcon="navigate_before"></mat-icon>
             </a>
-            <p>{{ today | date: 'MMMM yyyy' }}</p>
-            <a class="week-number-button">
+            <p>{{ dayStep | date: 'MMMM yyyy' }}</p>
+            <a class="week-number-button" (click)="addMonth()">
                 <mat-icon aria-hidden="false" aria-label="Next week" fontIcon="navigate_next"></mat-icon>
             </a>
         </div>
