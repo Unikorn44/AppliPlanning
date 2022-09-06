@@ -4,6 +4,7 @@
     <h4 class="p-30 cursor" (click)="homeDirection()">Accueil</h4>
   </div>
   <div class="d-flex flex-align-items-center p-30">
+    <h4 class="p-30">{{firstName}} {{lastName}}</h4>
     <app-button theme="primary" *ngIf="!loginDisplay" text="Déconnexion" (click)="logOut()"></app-button>
   </div>
 </nav>
