@@ -33,6 +33,19 @@ export class ProfilComponent implements OnInit {
       phone_number: ['', Validators.required],
       email: ['', Validators.required],
     });
+
+    this.user = {
+      id: 0,
+      first_name: "",
+      last_name: "",
+      city: "",
+      birthday_date: new Date(),
+      phone_number: "",
+      email: "",
+      admin: false,
+      picture: "",
+      planning: ""
+    }
   }
 
   ngOnInit(): void {
@@ -42,7 +55,6 @@ export class ProfilComponent implements OnInit {
   private getUser() {
     return this.http.get<User>(configServer.origin_server + "/api/user/" + this.id,  {headers: this.headers})
       .subscribe(data => {
-        this.user = data;
         this.user.admin = data.admin;
         this.user.birthday_date = new Date(data.birthday_date);
         this.user.city = data.city;
