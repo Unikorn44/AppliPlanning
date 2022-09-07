@@ -55,6 +55,10 @@ export class AuthService {
             value = value.toString();
             this.saveLastName(value);
           }
+          if(key == "city") {
+            value = value.toString();
+            this.saveCity(value);
+          }
         });
 
     });
@@ -78,6 +82,10 @@ export class AuthService {
 
   saveLastName(lastName: string) {
     localStorage.setItem("lastName", lastName);
+  }
+
+  saveCity(city: string) {
+    localStorage.setItem("city", city);
   }
 
   logout() {
