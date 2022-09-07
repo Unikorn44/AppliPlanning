@@ -24,7 +24,7 @@
       <div class="user-information">
         <div *ngIf="display" class="p-10 card-input d-flex flex-column">
           <label for="Birthday">Date de naissance*</label>
-          <input type="date" name="Birthday" [ngModel]="user.birthday_date" id="BirthdayInput" formControlName="birthday_date"/>
+          <input type="date" name="Birthday" [ngModel]="user.birthday_date  | date:'yyyy-MM-dd'" id="BirthdayInput" formControlName="birthday_date"/>
         </div>
         <div *ngIf="hide">
           <mat-icon aria-hidden="false" aria-label="Contact icon" fontIcon="phone" class="mt-30"></mat-icon>
