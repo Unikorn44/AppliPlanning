@@ -59,6 +59,10 @@ export class AuthService {
             value = value.toString();
             this.saveCity(value);
           }
+          if(key == "admin") {
+            value = value.toString();
+            this.saveAdmin(value);
+          }
         });
 
     });
@@ -86,6 +90,10 @@ export class AuthService {
 
   saveCity(city: string) {
     localStorage.setItem("city", city);
+  }
+
+  saveAdmin(admin: string) {
+    localStorage.setItem("admin", admin);
   }
 
   logout() {

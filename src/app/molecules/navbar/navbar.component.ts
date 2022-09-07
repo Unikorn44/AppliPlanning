@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class NavbarComponent implements OnInit {
 
   public loginDisplay: boolean = true;
+  public adminDisplay: boolean = true;
 
   public firstName: string = localStorage.getItem('firstName') || '';
   public lastName: string = localStorage.getItem('lastName') || '';
@@ -22,6 +23,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     if (localStorage.getItem('tokenBaerer') != null) {
       this.loginDisplay = false;
+    }
+    if (localStorage.getItem('admin') == "true") {
+      this.adminDisplay = false;
     }
   }
 
@@ -37,4 +41,14 @@ export class NavbarComponent implements OnInit {
   homeDirection() {
     this.router.navigateByUrl('/home');
   }
+
+  welcomeDirection() {
+    this.router.navigateByUrl('/accueil');
+  }
+
+  adminDirections() {
+    this.router.navigateByUrl('/admin');
+  }
+
+
 }
