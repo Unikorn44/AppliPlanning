@@ -47,7 +47,7 @@ export class NavbarComponent implements OnInit {
   }
 
   adminDirections() {
-    this.router.navigateByUrl('/admin');
+    window.open("http://localhost:8080/Jpa/pageadmin", "_blank");
   }
 
 
