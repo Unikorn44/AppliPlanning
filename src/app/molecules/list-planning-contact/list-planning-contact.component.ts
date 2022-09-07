@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-planning-contact.component.scss']
 })
 export class ListPlanningContactComponent implements OnInit {
-
+ 
   arrayUser = [
     {
       first_name : "Dargo",

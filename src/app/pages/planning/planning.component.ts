@@ -20,7 +20,7 @@ export class PlanningComponent implements OnInit {
   constructor(public http: HttpClient) { 
     this.arrayEvents = [];
   }
-
+ 
   ngOnInit(): void {
     this.getUserEvents();
   }

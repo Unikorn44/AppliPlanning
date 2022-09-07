@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact-card-list',
@@ -6,26 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-card-list.component.scss']
 })
 export class ContactCardListComponent implements OnInit {
-  arrayContact = [
-    {
-      first_name : "Dargo",
-      last_name : "Pierre",
-      phone: "01 02 03 04 05",
-      email: "dargo.pierre@mail.com"
-    },
-    {
-      first_name : "Harcher",
-      last_name : "Jean",
-      phone: "01 02 03 04 05",
-      email: "harcher.jean@mail.com"
-    },
-    {
-      first_name : "Yusha",
-      last_name : "Tom",
-      phone: "01 02 03 04 05",
-      email: "tom.yusha@mail.com"
-    }
-  ]
+  @Input() arrayContact : any;
 
   constructor() { }
 
