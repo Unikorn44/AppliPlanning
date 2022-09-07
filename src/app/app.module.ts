@@ -1,6 +1,10 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+registerLocaleData(localeFr);
 
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { AppComponent } from './app.component';
@@ -65,7 +69,9 @@ import { AuthService } from './services/auth.service';
   ],
   providers: [
     AuthService,
-    AuthGuardService],
+    AuthGuardService,
+    { provide: LOCALE_ID, useValue: 'fr-FR' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

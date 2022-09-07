@@ -1,15 +1,15 @@
 <div class="component calendar">
     <div class="calendar-content">
         <div class="week-number">
-            <a class="week-number-button">
+            <a class="week-number-button" (click)="removeMonth()">
                 <mat-icon aria-hidden="false" aria-label="Previous week" fontIcon="navigate_before"></mat-icon>
             </a>
-            <p>Semaine</p>
-            <a class="week-number-button">
+            <p>{{ calendarDisplay | date: 'MMMM yyyy' | titlecase }}</p>
+            <a class="week-number-button" (click)="addMonth()">
                 <mat-icon aria-hidden="false" aria-label="Next week" fontIcon="navigate_next"></mat-icon>
             </a>
         </div>
-        <app-list-day-event></app-list-day-event>
+        <app-list-day-event [listDayEvents]="filteredEvents"></app-list-day-event>
     </div>
     <div class="component-options">
         <app-button theme="primary" text="Gestion planning" type="submit"></app-button>
