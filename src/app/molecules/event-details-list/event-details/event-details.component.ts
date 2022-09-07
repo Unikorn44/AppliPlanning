@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Time } from "@angular/common";
+
 
 @Component({
   selector: 'app-event-details',
@@ -7,10 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EventDetailsComponent implements OnInit {
   @Input() event: any;
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

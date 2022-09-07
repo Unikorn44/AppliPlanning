@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { EventService } from 'src/app/services/event.service';
-import { Event } from 'src/app/atomes/event';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-day-event-details',
@@ -9,15 +7,10 @@ import { Event } from 'src/app/atomes/event';
 })
 export class DayEventDetailsComponent implements OnInit {
 
-  arrayTodayEvent: Event[] = [];
+  @Input() arrayDisplayEvents: any;
 
-  constructor(private eventService: EventService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getEvents();
-  }
-
-  getEvents(): void {
-    this.eventService.getEvents().subscribe(events => this.arrayTodayEvent = events);
   }
 }

@@ -1,1 +1,1 @@
-<div [ngClass]="{'active' : dataEvents.length > 0}">{{ dayNumber }}</div>
+<div [ngClass]="{'hasEvent' : dataEvents.length > 0}" (click)="transmitEvents()">{{ dayNumber }}</div>
