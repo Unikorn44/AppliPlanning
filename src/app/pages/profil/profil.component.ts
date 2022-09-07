@@ -1,7 +1,9 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Optional, Output } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from 'src/app/databaseTemplate/user';
 import configServer from "../../../Resources/configServer.json";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-profil',
@@ -17,17 +19,20 @@ export class ProfilComponent implements OnInit {
   private tokenBaerer : any = localStorage.getItem('tokenBaerer');
   private id = localStorage.getItem('id');
 
-  private headers = new HttpHeaders({'Authorization': this.tokenBaerer});
+  private headers = {'Authorization': this.tokenBaerer,
+                    'Content-Type': 'application/json'};
 
-  last_name: string = '';
-  first_name: string = '';
-  birth_date: Date = new Date();
-  phone_number: string = '';
-  email: string = '';
-  city: string = '';
+  form:FormGroup;
 
-
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, private fb:FormBuilder, private storage:LocalStorageService) {
+    this.form = this.fb.group({
+      last_name: ['', Validators.required],
+      first_name: ['', Validators.required],
+      city: ['', Validators.required],
+      birthday_date: ['', Validators.required],
+      phone_number: ['', Validators.required],
+      email: ['', Validators.required],
+    });
   }
 
   ngOnInit(): void {
@@ -39,7 +44,7 @@ export class ProfilComponent implements OnInit {
       .subscribe(data => {
         this.user = data;
         this.user.admin = data.admin;
-        this.user.birthday_date = data.birthday_date;
+        this.user.birthday_date = new Date(data.birthday_date);
         this.user.city = data.city;
         this.user.email = data.email;
         this.user.first_name = data.first_name;
@@ -48,18 +53,33 @@ export class ProfilComponent implements OnInit {
       })
   }
 
+  public onSubmitForm() {
+    const val = this.form.value as User;
+
+    let body = {
+      first_name: val.first_name,
+      last_name: val.last_name,
+      city: val.city,
+      birthday_date: val.birthday_date,
+      phone_number: val.phone_number,
+      email: val.email,
+      picture: "https://www.fillmurray.com/640/360"
+    }
+
+    console.log(val.birthday_date);
+    console.log(val.email);
+
+    this.storage.refreshStorage();
+
+    return this.http.put<any>(configServer.origin_server + "/api/user/update/" + this.id, body, {headers: this.headers})
+      .subscribe( data => {
+        console.log(data);
+      });
+  }
+
   public displayForm() {
     this.display = true;
     this.hide = false;
-  }
-
-  public onSubmitForm() {
-    // console.log(this.last_name);
-    // console.log(this.first_name);
-    // console.log(this.birth_date);
-    // console.log(this.phone_number);
-    // console.log(this.email);
-    // console.log(this.city);
   }
 
   public cancelForm() {
