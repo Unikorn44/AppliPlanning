@@ -13,7 +13,10 @@ export class NavbarComponent implements OnInit {
 
   public loginDisplay: boolean = true;
 
-  constructor(private authService: AuthService, private router: Router) {
+  public firstName: string = localStorage.getItem('firstName') || '';
+  public lastName: string = localStorage.getItem('lastName') || '';
+
+  constructor(public authService: AuthService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -29,5 +32,9 @@ export class NavbarComponent implements OnInit {
     } else {
       this.router.navigateByUrl('/');
     }
+  }
+
+  homeDirection() {
+    this.router.navigateByUrl('/home');
   }
 }

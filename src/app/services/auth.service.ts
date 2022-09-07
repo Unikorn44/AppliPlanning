@@ -47,6 +47,14 @@ export class AuthService {
             value = value.toString();
             this.saveId(value);
           }
+          if(key == "first_name") {
+            value = value.toString();
+            this.saveFirstName(value);
+          }
+          if(key == "last_name") {
+            value = value.toString();
+            this.saveLastName(value);
+          }
         });
 
     });
@@ -62,6 +70,14 @@ export class AuthService {
 
   saveId(id: string) {
     localStorage.setItem("id", id);
+  }
+
+  saveFirstName(firstName: string) {
+    localStorage.setItem("firstName", firstName);
+  }
+
+  saveLastName(lastName: string) {
+    localStorage.setItem("lastName", lastName);
   }
 
   logout() {
