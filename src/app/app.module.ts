@@ -33,6 +33,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuardService } from './guard/AuthGuardService';
 import { AuthService } from './services/auth.service';
+import { CreateEventComponent } from './molecules/create-event/create-event.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { AuthService } from './services/auth.service';
     PlanningContactComponent,
     DayEventDetailsComponent,
     EventDetailsListComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    CreateEventComponent
   ],
   imports: [
     BrowserModule,

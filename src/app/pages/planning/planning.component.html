@@ -5,4 +5,7 @@
     <div *ngIf="panelDisplay == 'displayEventDay'" class="width-50 m-10">
         <app-day-event-details [arrayDisplayEvents]="arrayEventsDisplay"></app-day-event-details>
     </div>
+    <div *ngIf="panelDisplay == 'createEvent'" class="width-50 m-10">
+        <app-create-event></app-create-event>
+    </div>
 </div>
