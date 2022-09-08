@@ -1,6 +1,19 @@
+@import "../../../assets/stylesheet/variables";
+
 .create-event{
     .create-event-header {
         padding: 3vh 2vh;
         text-align: center;
+    }
+
+    .create-event-form {
+        background-color: $color-yellow;
+        border-radius: $border-radius-8 $border-radius-8 0 0;
+        margin: 2vh;
+        padding: 1.5vh;
+
+        div {
+            margin: 1vh 0;
+        }
     }
 }

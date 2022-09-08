@@ -19,6 +19,7 @@ export class CalendarComponent implements OnInit, OnChanges {
   dayStep: Date;
 
   @Output() clickEvent = new EventEmitter<EventCollab[]>();
+  @Output() clickCreateEvent = new EventEmitter<any>();
 
   constructor() { 
     this.dayStep = new Date();
@@ -100,5 +101,9 @@ export class CalendarComponent implements OnInit, OnChanges {
 
   transmitEvents(events : EventCollab[]) {
     this.clickEvent.emit(events);
+  }
+
+  createEventPanel() {
+    this.clickCreateEvent.emit("creerEvent");
   }
 }

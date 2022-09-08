@@ -68,4 +68,12 @@ export class PlanningComponent implements OnInit {
     this.arrayEventsDisplay = events;
     this.panelDisplay = "displayEventDay";
   }
+
+  swapToCreateEvent(retour : any) {
+    this.panelDisplay = "createEvent";
+  }
+
+  newEventCreated(){
+    this.getUserEvents();
+  }
 }
