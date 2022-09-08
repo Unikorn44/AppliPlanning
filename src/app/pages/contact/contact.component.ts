@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from 'src/app/databaseTemplate/user';
 import configServer from "../../../Resources/configServer.json";
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-contact',
@@ -17,6 +18,8 @@ export class ContactComponent implements OnInit {
   public userList!: User[];
   public user!: User;
 
+  public localStorageService!: LocalStorageService;
+
   public form = new FormGroup({
     id: new FormControl('', Validators.required),
   });
@@ -27,7 +30,7 @@ export class ContactComponent implements OnInit {
   private id = localStorage.getItem('id');
   public idUser = Number(this.id);
 
-  private headers = new HttpHeaders({'Authorization': this.tokenBaerer});
+  private headers = {'Authorization': this.tokenBaerer};
 
   constructor(public http: HttpClient) {
    }
@@ -44,7 +47,7 @@ export class ContactComponent implements OnInit {
   }
 
   public getUser() {
-    return this.http.get<User[]>(configServer.origin_server + "/api/user/all",  {headers: this.headers})
+    return this.http.get<User[]>(configServer.origin_server + "/api/user/all", {headers: this.headers})
       .subscribe(data => {
         this.userList = [];
         console.table(data);
@@ -67,12 +70,15 @@ export class ContactComponent implements OnInit {
   }
 
   public addUser() {
-    console.log(this.form.value);
+    const idCollab = this.form.controls['id'].value;
+    console.log(this.headers);
 
-    return this.http.put<User>(configServer.origin_server + "/api/user/" + this.id + "/add/contact/" + this.form.value,  {headers: this.headers})
-      .subscribe(data => {
-        console.log(data);
-      })
+    let body = {};
+
+    return this.http.post<User>(configServer.origin_server + "/api/user/" + this.id + "/add/contact/" + idCollab, body, {headers: this.headers})
+    .subscribe(data => {
+      console.log(data);
+    })
   }
 
 }
