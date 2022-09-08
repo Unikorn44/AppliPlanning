@@ -1,0 +1,33 @@
+// color variables
+$color-beige: #FFE5B4;
+$color-beige-light: #fdf2e0be;
+$color-white: white;
+$color-yellow-light: #FFE5B4;
+$color-yellow-light-opacity: rgba(255, 229, 180, 0.1);
+$color-yellow: #E8AA42;
+$color-orange: #ebb14e;
+$color-orange-light: #ffc664;
+$color-blue-light: #1F4690;
+$color-blue: #231955;
+$color-black: #110d26;
+$color-black-light: #241d3f;
+$color-green: #96CEB4;
+$color-green-light: #b9dfcd;
+$color-red: #D9534F;
+
+// Background gradients
+$background-color-yellow-light: radial-gradient(circle at center right, rgb(255,234,192),#ecc079);
+
+// font family
+$headers-font: 'Nunito', "Helvetica", sans-serif;
+$body-font: "Work Sans", "Helvetica", "sans-serif";
+
+// height navbar
+$navbar-height: 12vh;
+
+// side bar
+$sidebar-width-open: 15vh;
+$sidebar-icon-size: 5vh;
+
+// border-radius
+$border-radius-8: 8px;

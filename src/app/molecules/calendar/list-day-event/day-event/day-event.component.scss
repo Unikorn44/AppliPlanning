@@ -1,0 +1,19 @@
+@import "../../../../../assets/stylesheet/variables";
+
+div {
+    padding: 2vh;
+    background-color: $color-beige-light;
+    border-radius: $border-radius-8;
+    height: 6vh;
+    text-align: center;
+    width: 6vh;
+    
+    &.hasEvent {
+        cursor: pointer;
+        background-color: $color-orange;
+
+        &:hover {
+            background-color: $color-orange-light;
+        }
+    }
+}

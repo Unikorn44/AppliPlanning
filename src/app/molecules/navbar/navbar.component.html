@@ -1,0 +1,12 @@
+<nav class="d-flex flex-justify-content-between">
+  <div class="d-flex flex-align-items-center">
+    <img src="../../../assets/images/logo-black.png" alt="logo appli planning" class="cursor" (click)="homeDirection()">
+    <h4 class="p-30 cursor" (click)="homeDirection()">Home</h4>
+    <h4 class="p-30 cursor" (click)="welcomeDirection()">Accueil</h4>
+    <h4 *ngIf="!adminDisplay" class="p-30 cursor" (click)="adminDirections()">Administration</h4>
+  </div>
+  <div class="d-flex flex-align-items-center p-30">
+    <h4 class="p-30">{{firstName}} {{lastName}}</h4>
+    <app-button theme="primary" *ngIf="!loginDisplay" text="Déconnexion" (click)="logOut()"></app-button>
+  </div>
+</nav>

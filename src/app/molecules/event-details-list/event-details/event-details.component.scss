@@ -1,0 +1,30 @@
+@import "../../../../assets/stylesheet/variables";
+
+.event-details {
+    margin: 1vh;
+    border-radius: $border-radius-8;
+    cursor: pointer;
+    
+    .event-details-header {
+        align-items: center;
+        background-color: $color-orange;
+        border-radius: $border-radius-8 $border-radius-8 0 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1vh;
+
+        .id-event {
+            font-size: small;
+        }
+
+        .event-details-time {
+            text-align: right;
+        }
+    }
+
+    .event-details-content {
+        background-color: $color-beige-light;
+        border-radius: 0 0 $border-radius-8 $border-radius-8;
+        padding: 1vh 2vh;
+    }
+}

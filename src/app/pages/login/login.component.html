@@ -1,0 +1,16 @@
+<div class="image-home">
+  <div class="card-form">
+
+    <form (ngSubmit)="login()" [formGroup]="form">
+      <h4>Veuillez vous connecter</h4>
+      <div class="p-10 card-input">
+        <input name="identifiant" placeholder="identifiant" id="identifiantInput" formControlName="identifiant"/>
+      </div>
+      <div class="p-10 card-input">
+        <input type="password" name="password" placeholder="mot de passe" id="passwordInput" formControlName="password"/>
+      </div>
+      <app-button theme="big" text="Login" type="submit"></app-button>
+    </form>
+
+  </div>
+</div>

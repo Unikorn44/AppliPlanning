@@ -1,0 +1,11 @@
+@import "../../../assets/stylesheet/variables";
+
+.list-contact-card {
+    display: flex;
+    flex-wrap: wrap;
+
+    .contact-card-element {
+        padding: 1vh;
+        width: 50%;
+    }
+}

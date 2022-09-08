@@ -1,0 +1,10 @@
+<div class="event-details-list">
+    <div class="event-details-list-header">
+        <p>{{ displayDate | date: 'EEEE dd MMMM' | titlecase }}</p>
+    </div>
+    <ul>
+        <li *ngFor="let event of arrayEvents">
+            <app-event-details [event]="event"></app-event-details>
+        </li>
+    </ul>
+</div>

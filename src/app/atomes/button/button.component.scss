@@ -1,0 +1,81 @@
+@import "../../../assets/stylesheet/variables";
+
+  button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+
+  .btn {
+    border-radius: 50px;
+    transition: 0.5s;
+    button {
+      cursor: pointer;
+    }
+    &:hover {
+      transition: 0.5s;
+    }
+  }
+  // gros bouton exemple home page
+  .btn-big {
+    padding: 10px 50px;
+    margin: 3rem 5rem;
+    border: none;
+    display: block;
+    background-color: $color-blue;
+    button {
+      // h3
+      font-family: $headers-font;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: $color-yellow;
+    }
+    &:hover {
+      background-color: $color-yellow;
+      button {
+        color: $color-blue;
+      }
+    }
+  }
+
+  // bouton principal
+  .btn-primary {
+    padding: 5px 10px;
+    border: none;
+    background-color: $color-blue;
+    button {
+      // h5
+      font-family: $headers-font;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: $color-yellow;
+    }
+    &:hover {
+      background-color: $color-yellow;
+      button {
+        color: $color-blue;
+      }
+    }
+  }
+
+  //bouton secondaire
+  .btn-secondary {
+    padding: 5px 10px;
+    border: none;
+    border: 1px solid $color-yellow;
+    button {
+      // h5
+      font-family: $headers-font;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: $color-black;
+    }
+    &:hover {
+      background-color: $color-yellow;
+      button {
+        color: $color-blue;
+      }
+    }
+  }

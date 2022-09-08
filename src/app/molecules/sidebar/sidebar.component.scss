@@ -1,0 +1,53 @@
+@import "../../../assets/stylesheet/variables";
+
+.sidebar {
+    background-color: $color-black;
+    display: inline-flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+
+    .sidebar-option {
+        align-items: center;
+        background-color: rgba(255, 229, 180, 0);
+        color: $color-white;
+        display: flex;
+        padding: 1vh;
+        transition: background-color 0.1s, color 0.1s;
+
+        &:hover, &:active{
+            background-color: rgba(255, 229, 180, 0.2);
+            color: $color-yellow-light;
+        }
+
+        &:first-child {
+            margin-top: 2vh;
+        }
+
+        span {
+            color: $color-white;
+            font-weight: 500;
+            margin: 0;
+            overflow: hidden;
+            transition: width 0.5s, margin 0.5s;
+            width: 0;
+        }
+        
+        mat-icon {
+            height: $sidebar-icon-size;
+            font-size: $sidebar-icon-size;
+            width: $sidebar-icon-size;
+        }
+    }
+    
+    &:hover {
+        .sidebar-option {
+            span {
+                width: $sidebar-width-open;
+                display: block;
+                margin: 0 1vh 0 1.5vh;
+            }
+        }
+    }
+}
