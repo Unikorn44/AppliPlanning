@@ -6,7 +6,9 @@
     <form [formGroup]="form">
       <select formControlName="id" [ngModel]="null">
         <option [ngValue]="null" disabled selected>Choisir un utilisateur</option>
-        <option *ngFor="let user of userList" [ngValue]="user.id">{{user.first_name}} {{user.last_name}} - {{user.city}}</option>
+        <ng-container *ngFor="let user of userList">
+          <option *ngIf="user.id != idUser" [ngValue]="user.id">{{user.first_name}} {{user.last_name}} - {{user.city}}</option>
+        </ng-container>
       </select>
       <app-button class="m-10" theme="primary" text="Ajouter" type="submit" (click)="addUser()"></app-button>
     </form>
