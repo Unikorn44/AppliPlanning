@@ -3,8 +3,8 @@
     <form [formGroup]="form">
       <div class="d-flex flex-justify-content-center">
         <mat-icon (click)="displayForm()" aria-hidden="false" aria-label="Contact icon" fontIcon="edit" class="mt-30"></mat-icon>
-        <img *ngIf="user.admin == null" src="../../../assets/images/logo.png" alt="Photo profil">
-        <img *ngIf="user.admin" [src]="user.picture" alt="Photo profil">
+        <img *ngIf="user.picture != ''" [src]="user.picture" alt="Photo profil">
+        <img *ngIf="user.picture == ''" src="../../../assets/images/logo.png" alt="Photo profil">
         <p *ngIf="user.admin" class="admin">Admin</p>
       </div>
       <div *ngIf="hide" class="d-flex flex-justify-content-center">

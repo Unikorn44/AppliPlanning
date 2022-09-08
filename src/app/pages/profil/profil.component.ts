@@ -62,6 +62,7 @@ export class ProfilComponent implements OnInit {
         this.user.first_name = data.first_name;
         this.user.last_name = data.last_name;
         this.user.phone_number = data.phone_number;
+        this.user.picture = data.picture;
       })
   }
 
