@@ -4,21 +4,10 @@
     margin: 1vh;
     border-radius: $border-radius-8;
     cursor: pointer;
-
-    &.free {
-        .event-details-header {
-            background-color: $color-green;
-        }
-    }
-
-    &.conflict {
-        .event-details-header {
-            background-color: $color-red;
-        }
-    }
     
     .event-details-header {
         align-items: center;
+        background-color: $color-orange;
         border-radius: $border-radius-8 $border-radius-8 0 0;
         display: flex;
         justify-content: space-between;

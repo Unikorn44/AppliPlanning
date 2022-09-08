@@ -9,10 +9,9 @@
                 <mat-icon aria-hidden="false" aria-label="Next week" fontIcon="navigate_next"></mat-icon>
             </a>
         </div>
-        <app-list-day-event [listDayEvents]="filteredEvents"></app-list-day-event>
+        <app-list-day-event [listDayEvents]="filteredEvents" (clickEvent)="transmitEvents($event)"></app-list-day-event>
     </div>
     <div class="component-options">
-        <app-button theme="primary" text="Gestion planning" type="submit"></app-button>
         <app-button theme="primary" text="Exporter planning" type="submit" (click)="exportPlanning()" ></app-button>
     </div>
 </div>

@@ -1,9 +1,9 @@
 <div class="event-details-list">
     <div class="event-details-list-header">
-        <p>Journée du Mardi 15/16/16</p>
+        <p>{{ displayDate | date: 'EEEE dd MMMM' | titlecase }}</p>
     </div>
     <ul>
-        <li *ngFor="let event of arrayEvent">
+        <li *ngFor="let event of arrayEvents">
             <app-event-details [event]="event"></app-event-details>
         </li>
     </ul>

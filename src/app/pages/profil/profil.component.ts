@@ -32,7 +32,21 @@ export class ProfilComponent implements OnInit {
       birthday_date: ['', Validators.required],
       phone_number: ['', Validators.required],
       email: ['', Validators.required],
+      picture: ['', Validators.required]
     });
+
+    this.user = {
+      id: 0,
+      first_name: "",
+      last_name: "",
+      city: "",
+      birthday_date: new Date(),
+      phone_number: "",
+      email: "",
+      admin: false,
+      picture: "",
+      planning: ""
+    }
   }
 
   ngOnInit(): void {
@@ -42,7 +56,6 @@ export class ProfilComponent implements OnInit {
   private getUser() {
     return this.http.get<User>(configServer.origin_server + "/api/user/" + this.id,  {headers: this.headers})
       .subscribe(data => {
-        this.user = data;
         this.user.admin = data.admin;
         this.user.birthday_date = new Date(data.birthday_date);
         this.user.city = data.city;
@@ -50,6 +63,7 @@ export class ProfilComponent implements OnInit {
         this.user.first_name = data.first_name;
         this.user.last_name = data.last_name;
         this.user.phone_number = data.phone_number;
+        this.user.picture = data.picture;
       })
   }
 
@@ -63,11 +77,13 @@ export class ProfilComponent implements OnInit {
       birthday_date: val.birthday_date,
       phone_number: val.phone_number,
       email: val.email,
-      picture: "https://www.fillmurray.com/640/360"
+      picture: val.picture
     }
 
     console.log(val.birthday_date);
     console.log(val.email);
+    console.log(val.picture);
+
 
     this.storage.refreshStorage();
 

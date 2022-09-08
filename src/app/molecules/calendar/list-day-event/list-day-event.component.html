@@ -1,5 +1,5 @@
 <ul>
     <li *ngFor="let dayEvents of listDayEvents | keyvalue ">
-        <app-day-event [dayNumber]="dayEvents.key"  [dataEvents]="dayEvents.value"></app-day-event>
+        <app-day-event [dayNumber]="dayEvents.key"  [dataEvents]="dayEvents.value" (clickEvent)="transmitEvents($event)"></app-day-event>
     </li>
 </ul>

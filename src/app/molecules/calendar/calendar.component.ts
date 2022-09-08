@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { EventCollab } from 'src/app/databaseTemplate/eventCollab';
 
 @Component({
@@ -17,6 +17,8 @@ export class CalendarComponent implements OnInit, OnChanges {
   calendarDisplay:Date;
 
   dayStep: Date;
+
+  @Output() clickEvent = new EventEmitter<EventCollab[]>();
 
   constructor() { 
     this.dayStep = new Date();
@@ -96,4 +98,7 @@ export class CalendarComponent implements OnInit, OnChanges {
     this.update();
   }
 
+  transmitEvents(events : EventCollab[]) {
+    this.clickEvent.emit(events);
+  }
 }

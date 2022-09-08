@@ -3,8 +3,15 @@
     <form [formGroup]="form">
       <div class="d-flex flex-justify-content-center">
         <mat-icon (click)="displayForm()" aria-hidden="false" aria-label="Contact icon" fontIcon="edit" class="mt-30"></mat-icon>
-        <img src="../../../assets/images/logo.png" alt="Photo profil">
+        <img *ngIf="user.picture != ''" [src]="user.picture" alt="Photo profil">
+        <img *ngIf="user.picture == ''" src="../../../assets/images/logo.png" alt="Photo profil">
         <p *ngIf="user.admin" class="admin">Admin</p>
+      </div>
+      <div *ngIf="display" class="d-flex flex-justify-content-center">
+        <div class="p-10 card-input d-flex flex-column">
+          <label for="last_name">Picture</label>
+          <input type="text" name="picture" [ngModel]="user.picture" id="pictureInput" formControlName="picture"/>
+        </div>
       </div>
       <div *ngIf="hide" class="d-flex flex-justify-content-center">
         <h3 class="p-10">{{user.last_name}}</h3>

@@ -7,16 +7,13 @@ div {
     height: 6vh;
     text-align: center;
     width: 6vh;
-    cursor: pointer;
+    
+    &.hasEvent {
+        cursor: pointer;
+        background-color: $color-orange;
 
-    &:hover{
-        background-color: $color-white;
-    }
-
-    &.active {
-        background-color: $color-green;
-        &:hover{
-            background-color: $color-green-light;
+        &:hover {
+            background-color: $color-orange-light;
         }
     }
 }
