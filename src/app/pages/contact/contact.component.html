@@ -1,1 +1,14 @@
 <app-contact-card-list [arrayContact]="contacts"></app-contact-card-list>
+<div class="mt-2">
+  <app-button class= "p-10" theme="primary" text="Ajouter un collaborateur" type="submit" (click)="getUser()"></app-button>
+  <br>
+  <div *ngIf="userList">
+    <form [formGroup]="form">
+      <select formControlName="id" [ngModel]="null">
+        <option [ngValue]="null" disabled selected>Choisir un utilisateur</option>
+        <option *ngFor="let user of userList" [ngValue]="user.id">{{user.first_name}} {{user.last_name}} - {{user.city}}</option>
+      </select>
+      <app-button class="m-10" theme="primary" text="Ajouter" type="submit" (click)="addUser()"></app-button>
+    </form>
+  </div>
+</div>
