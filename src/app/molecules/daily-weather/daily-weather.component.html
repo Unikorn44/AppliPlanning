@@ -1,4 +1,4 @@
-<div class="daily-weather">
+<div *ngIf="meteoData != undefined" class="daily-weather">
     <div class="daily-weather-header">
         <p class="ville">{{ville | uppercase}}</p>
         <img src={{meteoData.icon}} height="45px" width="45px">
