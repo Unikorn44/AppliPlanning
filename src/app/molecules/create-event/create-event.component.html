@@ -1,0 +1,32 @@
+<div class="create-event component">
+    <div class="create-event-header">
+        <p>Créer un nouvel évent</p>
+    </div>
+    <form class="create-event-form" [formGroup]="eventForm" (ngSubmit)="submitEvent()">
+        <div class="card-input">
+            <label for="title">Titre : </label>
+            <input type="text" name="title" formControlName="title" required placeholder="Titre de l'event">
+        </div>
+        <div class="card-input">
+            <label for="date">Date de l'évent : </label>
+            <input type="date" formControlName="date_event" required/>
+        </div>
+        <div class="card-input">
+            <label for="start_time">Début de l'évent : </label>
+            <input type="time" name="start_time" formControlName="start_time" required/>
+        </div>
+        <div class="card-input">
+            <label for="end_time">Fin de l'évent : </label>
+            <input type="time" name="end_time "formControlName="end_time" required/>
+        </div>
+        <div class="card-input">
+            <label for="description">Description de l'event : </label>
+            <textarea formControlName="description" name="description" required placeholder="Description de l'event"></textarea>
+        </div>
+        <div class="component-options">
+            <app-button theme="primary" text="Ajouter un évent">
+                <input type="submit">
+            </app-button>
+        </div>
+    </form>
+</div>

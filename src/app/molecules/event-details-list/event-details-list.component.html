@@ -2,6 +2,9 @@
     <div class="event-details-list-header">
         <p>{{ displayDate | date: 'EEEE dd MMMM' | titlecase }}</p>
     </div>
+    <div *ngIf="isEmpty" class="alert">
+      <h4>Vous n'avez pas d'évènements aujourd'hui!</h4>
+    </div>
     <ul>
         <li *ngFor="let event of arrayEvents">
             <app-event-details [event]="event"></app-event-details>
