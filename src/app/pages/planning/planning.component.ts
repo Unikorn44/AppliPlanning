@@ -28,7 +28,7 @@ export class PlanningComponent implements OnInit {
     this.arrayEventsDisplay = [];
     this.panelDisplay = "createEvent";
   }
-
+ 
   ngOnInit(): void {
     this.getUserEvents();
   }

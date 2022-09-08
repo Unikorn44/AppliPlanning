@@ -9,6 +9,10 @@ import { EventCollab } from 'src/app/databaseTemplate/eventCollab';
 export class CalendarComponent implements OnInit, OnChanges {
   @Input() dataEvents: any;
 
+  private lastName = localStorage.getItem('lastName');
+  private firstName = localStorage.getItem('firstName');
+  private nomFichier = "";
+
   filteredEvents: Map<number,EventCollab[]>
   calendarDisplay:Date;
 
@@ -29,6 +33,22 @@ export class CalendarComponent implements OnInit, OnChanges {
     this.update()
   }
 
+  //méthode export du planning 
+  public exportPlanning(){
+    
+    //création d'un élément type <a>
+    const docExport = document.createElement("a");
+    docExport.href = URL.createObjectURL(new Blob([JSON.stringify( this.dataEvents, null, 2)], {type: "text/plain"}));
+    
+    //envoi dans dossier download
+    this.nomFichier  = "Calendrier_" + this.lastName + "_" +  this.firstName + ".txt"
+    docExport.setAttribute("download", this.nomFichier);
+   
+    document.body.appendChild(docExport);
+    docExport.click();
+    document.body.removeChild(docExport);
+  }
+
   update() {
     this.filteredEvents = this.generateEmptyFilteredEvents();
 
@@ -40,7 +60,6 @@ export class CalendarComponent implements OnInit, OnChanges {
   }
   
   generateFilteredEvents (events: EventCollab[]) {
-
     events.forEach( event => {
         const jourEvent = event.date_event.getDate();
         if (
