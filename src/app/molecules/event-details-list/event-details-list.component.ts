@@ -17,7 +17,8 @@ export class EventDetailsListComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges) {
     if (this.arrayEvents != undefined && this.arrayEvents.length > 0) {
-      this.displayDate = new Date (this.arrayEvents[0].date_event)
+      this.displayDate = new Date (this.arrayEvents[0].date_event);
+      console.table(this.arrayEvents);
     }
   }
 }
