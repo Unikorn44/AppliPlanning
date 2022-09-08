@@ -9,8 +9,11 @@ export class EventDetailsListComponent implements OnInit {
   @Input() arrayEvents: any;
 
   displayDate!: any;
+  isEmpty = true;
 
-  constructor() { }
+  constructor() {
+    this.displayDate = new Date();
+   }
 
   ngOnInit(): void {
   }
@@ -18,6 +21,7 @@ export class EventDetailsListComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges) {
     if (this.arrayEvents != undefined && this.arrayEvents.length > 0) {
       this.displayDate = new Date (this.arrayEvents[0].date_event);
+      this.isEmpty = false;
     }
   }
 }
