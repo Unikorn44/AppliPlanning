@@ -34,7 +34,7 @@ export class PlanningComponent implements OnInit {
   }
 
   private getUserEvents() {
-    return this.http.get<Array<EventDb>>(configServer.origin_server + "/api/event/user/" + this.id,  {headers: this.headers})
+    return this.http.get<Array<EventDb>>(configServer.origin_server + "/api/user/" + this.id +"/events",  {headers: this.headers})
       .subscribe(data => {
 
         const formattedArrayEvents : EventCollab[] = [];
